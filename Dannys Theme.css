@@ -390,15 +390,31 @@ background-color: var(--Orange);
   --color-background-weeknum: green;
   --color-background-weekend: var(--LightOrange);
 
-  --color-dot: var(--Orange); /* dot colors */
+  --color-dot: var(--DarkGrey); /* dot colors */
   --color-arrow: var(--Orange); /* Month nav arrows */
   --color-button: yellow;
 
   --color-text-title: grey ; /*month heading */
   --color-text-heading: grey; /* Week heading */
   --color-text-day: grey; /* Day number */
-  --color-text-today: white; /*Today number */
+  --color-text-today: var(--Orange); /*Today number */
   --color-text-weeknum: var(--LightOrange); /* Week Number */
+}
+
+.day.has-note.active.svelte-q3wqg9 /*Highlighted day */
+{
+    background-color: var(--Orange);
+}
+
+.day.has-note.active.svelte-q3wqg9:hover /* Highlighed day hover */
+{
+    background-color: var(--Blue);
+}
+
+.title.svelte-1elemso
+.year.svelte-1elemso
+{
+    color:var(--Orange)
 }
 
 /*..........CHECKLIST PLUGIN..........*/
