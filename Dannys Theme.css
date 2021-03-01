@@ -195,6 +195,10 @@ html,body /* Background is hardly seen (look for section colors)*/
 }
 
 
+.CodeMirror-cursor */ The curser formatting */
+{
+    background-color: var(--Orange) !important;
+}
 
 /*..........GRAPH VIEW..........*/
 
