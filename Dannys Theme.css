@@ -195,7 +195,7 @@ html,body /* Background is hardly seen (look for section colors)*/
 }
 
 
-.CodeMirror-cursor */ The curser formatting */
+.CodeMirror-cursor /* The curser formatting */
 {
     background-color: var(--Orange) !important;
 }
@@ -415,10 +415,20 @@ background-color: var(--Orange);
     background-color: var(--Blue);
 }
 
-.title.svelte-1elemso
-.year.svelte-1elemso
+.title.svelte-1elemso .year.svelte-1elemso /*Calendar title */
 {
-    color:var(--Orange)
+    color:var(--Blue)
+}
+/*..........LINE NUMBER PLUGIN..........*/
+
+.CodeMirror-linenumber.CodeMirror-gutter-elt /* Line number */
+{
+    color: var(--Orange);
+}
+
+.CodeMirror-activeline-gutter .CodeMirror-linenumber /* Active Line Number */
+{
+    color: var(--Blue)
 }
 
 /*..........CHECKLIST PLUGIN..........*/
