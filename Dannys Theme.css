@@ -428,7 +428,7 @@ background-color: var(--Orange);
 
 .CodeMirror-activeline-gutter .CodeMirror-linenumber /* Active Line Number */
 {
-    color: var(--Blue)
+    color: black
 }
 
 /*..........CHECKLIST PLUGIN..........*/
