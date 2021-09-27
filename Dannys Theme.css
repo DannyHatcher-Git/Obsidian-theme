@@ -19,7 +19,7 @@
     --text-accent-hover:          var(--Orange);
     --interactive-accent-hover:   var(--Blue);
     --text-highlight-bg:          var(--LightBlue);
-    --text-on-accent:             var(--Black);
+    --text-on-accent:             var(--white);
 }
 
 /*..................................*/
@@ -100,9 +100,11 @@ em
     background: transparent
 }
 
+/* PAGE HEADER */
 .workspace-leaf.mod-active .view-header 
 {
-    background-color: pink;
+    background-color: var(--Blue);
+    border-bottom: 3px solid var(--Orange); 
 }
 
 .view-header
@@ -112,6 +114,47 @@ em
     text-align: center;
     border-bottom-width: 0;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
+}
+
+
+/*change color when hover*/
+.titlebar-button.mod-back:hover,
+.titlebar-button.mod-forward:hover {
+  color: var(--Blue);
+  transform: scale(1.2);
+}
+
+.titlebar-button.mod-maximize:hover, 
+.titlebar-button.mod-minimize:hover,
+.workspace-ribbon-collapse-btn:hover,
+.workspace-tab-header.is-active:hover{
+  color: var(--Blue);
+}
+
+.workspace-tab-header:hover {
+  color: var(--Blue);
+  text-align: center;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.workspace-tab-header.is-active {
+  color: var(--Blue);
+}
+
+.titlebar-button {
+  -webkit-app-region: no-drag;
+  padding: 0 9px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.titlebar-button:hover {
+  opacity: 1;
+}
+
+.workspace-tab-header-inner {
+  padding: 3px 9px;
 }
 
 .empty-state-container:hover
@@ -280,6 +323,107 @@ em
     transform: translate3d(0px, -3px, 0px);
 }
 
+/* QUOTE BLOCK EDIT MODE */
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
+    color: transparent !important;
+  }
+  
+  .CodeMirror-line span.cm-formatting-quote {
+    color: var(--red) !important;
+  }
+  
+  div:not(.CodeMirror-activeline) > .HyperMD-quote {
+    border-left: 7px solid var(--Orange);
+    border-radius: 6px;
+    background-color: var(--LighterGrey);
+  }
+  
+  div.CodeMirror-activeline > .HyperMD-quote {
+    border-left: 7px solid var(--Orange);
+    border-radius: 6px;
+  }
+  
+  .cm-quote:not([class*="link"]):not([class*="string"]) {
+    color: var(--Black);
+  }
+
+/* CHECKMARK */
+.markdown-preview-view .task-list-item-checkbox 
+{
+   -webkit-appearance: none;
+   box-sizing: border-box;
+   border: 1px solid var(--text-normal);
+   position: relative;
+   width: 16px;
+   height: 16px;
+   margin: 0px 7px 2px 0;
+   filter: hue-rotate(var(--theme-color));
+   transition: all 500ms;
+   cursor: pointer;
+   left: 1px;
+}
+  
+.markdown-preview-view .task-list-item-checkbox:checked 
+{
+   border: none;
+   background-color: var(--Orange);
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked:hover 
+{
+    background-color: var(--Blue);
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+   content: ' ';
+   position: absolute;
+   background-color: white;
+   left: 3px;
+   top: 3px;
+   right: 2px;
+   bottom: 2px;
+   transform: scale(1.1);
+   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+}
+
+/* CHECKMARK EDIT MODE*/
+
+span.cm-formatting-task 
+{
+   display: inline !important; 
+}
+  
+span.cm-formatting-task.cm-property 
+{
+   color: var(--text-accent);
+} 
+  
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property 
+{
+   color: transparent;
+   position: relative;
+}
+  
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta:after,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property:after 
+{
+   content: "☐";
+   position: absolute;
+   top: 3px;
+   left: 6px;
+   color: var(--text-normal);
+   font-size: 1.3em;
+   font-family: Arial, serif;
+}
+  
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property:after 
+{
+   content: "☑";
+   color: var(--Orange) !important;
+}
+
 /* Block Embeds (block references */
 
 .internal-embed .markdown-embed
@@ -374,6 +518,134 @@ em
   border-bottom: 1px solid;
 }
 
+
+/* headering collaspe indicators */
+
+.markdown-preview-view div.is-collapsed h1::after,
+.markdown-preview-view div.is-collapsed h2::after,
+.markdown-preview-view div.is-collapsed h3::after, 
+.markdown-preview-view div.is-collapsed h4::after, 
+.markdown-preview-view div.is-collapsed h5::after, 
+.markdown-preview-view div.is-collapsed h6::after,
+.markdown-preview-view ol .is-collapsed::after, 
+.markdown-preview-view ul .is-collapsed::after {
+  content: "...";
+  padding: 5px;
+  color: var(--text-faint);
+}
+
+div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  padding-left: 10px;
+  transition: transform 20ms linear 0s;
+}
+
+h1 div.heading-collapse-indicator.collapse-indicator,
+h2 div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  padding-left: 10px;
+  margin-top: 13px;
+  transition: transform 20ms linear 0s;
+}
+
+h1 div.heading-collapse-indicator.collapse-indicator::before,
+h2 div.heading-collapse-indicator.collapse-indicator::before {
+  content : "↓";
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Inter';
+  margin-left: -2px;
+  margin-top: -6px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+  opacity: 0;
+}
+
+.heading-collapse-indicator.collapse-indicator.collapse-icon svg 
+{
+  display: none;
+}
+
+div.heading-collapse-indicator.collapse-indicator::before 
+{
+  content : "↓";
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Inter';
+  margin-left: -2px;
+  margin-top: 1px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+  opacity: 0;
+}
+
+div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator 
+{
+  transform: translateX(3px) translateY(10px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+div.is-collapsed div.heading-collapse-indicator.collapse-indicator 
+{
+  transform: translateX(-8px) translateY(20px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+h1:hover div.heading-collapse-indicator.collapse-indicator::before,
+h2:hover div.heading-collapse-indicator.collapse-indicator::before,
+h3:hover div.heading-collapse-indicator.collapse-indicator::before,
+h4:hover div.heading-collapse-indicator.collapse-indicator::before,
+h5:hover div.heading-collapse-indicator.collapse-indicator::before,
+h6:hover div.heading-collapse-indicator.collapse-indicator::before 
+{
+  opacity: 1;
+}
+
+/* headering collaspe indicators in edit */
+
+div.CodeMirror-foldgutter-open 
+{
+    left: 5px;
+    position: absolute;
+    transition: transform 20ms linear 0s;
+}
+  
+div.CodeMirror-foldgutter-open::after 
+{
+  content : "↓";
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Inter';
+  margin-left: -4px;
+  top: -1px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+  
+div.CodeMirror-foldgutter-folded 
+{ 
+   position: absolute;
+   transition: transform 20ms linear 0s;
+}
+  
+div.CodeMirror-foldgutter-folded::after 
+{
+  content : "→";
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Inter';
+  margin-left: 1px;
+  top: -1px;
+  color: var(--text-accent);
+  opacity: 0.5;
+  transition: transform 10ms linear 0s;
+}
+
 /*..........CODE BLOCK STYLING..........*/
 
 /* code in ``` here``` colour (inline code)*/
@@ -412,7 +684,7 @@ em
 
 .suggestion-item.is-selected /* Search bar highilght where curser is*/ 
 {
-    background-color:var(--Orange) ;
+    background-color:var(--Orange);
     color: white
 }
 
@@ -431,7 +703,8 @@ em
 
 .external-link:hover /* External link mouse hover */
 {
-    color:var(--Orange)
+    color:var(--Blue);
+    background-color: #CDE4FF;
 }
 
 .markdown-source-view
@@ -456,7 +729,8 @@ em
 
 .internal-link:hover
 {
-    color:var(--Blue);
+    color: var(--Blue);
+    background-color: #CDE4FF;
 }
 
 .footnote-link:hover
@@ -765,25 +1039,250 @@ background-color: var(--Orange);
     color: white
 }
 
-.search-result-file-match /* Matched result display */
+.search-result-file-match /* Expanded search results */
 {
-    background-color:var(--LightOrange);
-    color:white
+    color:var(--Black)
 }
 
-.search-result-file-match:hover
+.search-result-file-match:hover /* Expanded search result */
 {
-    background-color: var(--Blue)
+    background-color: var(--LighterGrey)
+}
+/* Backlink arrow icons */
+.backlink-pane .search-result-container .collapse-icon {
+    left: 0px;
+    top: 7px;
+    margin-top: 0px;
+    transition: transform 20ms linear 0s;
 }
 
+.backlink-pane .search-result-container .collapse-icon::before 
+{
+    content : "↓";
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: bold;
+    color: var(--text-accent);
+    transition: transform 10ms linear 0s;
+}
+
+.backlink-pane .search-result-container .collapse-icon svg 
+{
+    display: none;
+    color:var(--accent-strong);
+    height:7px;
+    width:7px;
+}
+
+.backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon 
+{
+    transform: translateX(1px) translateY(1px) rotate(-90deg);
+    opacity: 0.5;
+}
+
+/* Search result arrow icons */
+
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon 
+{
+    left: 0px;
+    top: 7px;
+    margin-top: 0px;
+    transition: transform 20ms linear 0s;
+}
+
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before 
+{
+    content : "↓";
+    font-size: 14px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: 'Inter';
+    color: var(--text-accent);
+    transition: transform 10ms linear 0s;
+}
+
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg 
+{
+    display: none;
+    color:var(--accent-strong);
+    height:7px;
+    width:7px;
+}
+  
+.workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon 
+{
+    transform: translateX(1px) translateY(1px) rotate(-90deg);
+    opacity: 0.5;
+}
+
+/* outline page*/
+.outline .tree-item-self.is-clickable 
+{
+    padding-left: 27px !important;
+}
+
+.outline .tree-item .collapse-icon 
+{
+    padding: 0px;
+    transition: transform 20ms linear 0s;
+}
+
+.outline .tree-item .collapse-icon::before 
+{
+    content : "↓";
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Inter';
+    color: var(--text-accent);
+    transition: transform 10ms linear 0s;
+}
+
+.outline .tree-item .collapse-icon svg 
+{
+    display: none;
+    color: var(--accent-strong);
+    height: 7px;
+    width: 7px;
+}
+
+.outline .tree-item.is-collapsed .collapse-icon 
+    {
+    transform: translateX(-1px) translateY(-1px) rotate(-90deg);
+    opacity: 0.5;
+}
+  
+/*vertical lines in outline page*/
+.outline .tree-item-children 
+{
+    margin-left: 14px;
+    border-left: 2px solid rgba(148, 148, 148, 0.2);
+    border-radius: 0px;
+    transition:all 300ms ease-in-out;
+}
+
+.outline .tree-item-children:hover 
+{
+    border-left-color: var(--Blue);
+}
+
+
+/* list collaspe icon */
+
+.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon 
+{
+    margin-top: 0px;
+    transition: transform 20ms linear 0s;
+}
+
+.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before 
+{
+    content : "↓";
+    font-size: 14px;
+    margin-left: -5px;
+    font-weight: bold;
+    font-family: 'Inter';
+    color: var(--text-accent);
+    transition: transform 10ms linear 0s;
+}
+
+.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg 
+{
+    display: none;
+    color: var(--accent-strong);
+    height: 7px;
+    width: 7px;
+}
+
+.markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon 
+{
+    transform: translateX(-3px) translateY(-2px) rotate(-90deg);
+    opacity: 0.5;
+}
+
+
+/* Search */
 .search-input-clear-button /* Search Bar exit button */
 {
-   color: black
+   color: var(--Black)
 }
 
 .search-input-clear-button:hover
 {
-    color:var(--Orange)
+    color:var(--LighterGrey)
 }
 
+/*table hover*/
+.markdown-preview-view td:hover
+{
+    background-color: var(--Orange);
+}
 
+/*table raw hover*/
+.markdown-preview-view tr:hover
+{
+    background-color: var(--LightOrange);
+}
+
+.markdown-preview-view th:hover
+{
+    background-color: var(--LightOrange);
+}
+
+.HyperMD-table-row.CodeMirror-line 
+{
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: break-spaces !important;
+}
+  
+
+
+
+
+/* BOTTOM STATUS BAR */ 
+.status-bar, .side-dock.mod-right, .side-dock.mod-left /* bottom status line */
+ {}
+  
+.status-bar 
+{
+    --bar-vertical-padding: 4px;
+    --bar-height: calc(22px + (5px));
+    line-height: 1;
+    padding: 0 10px;
+    height: var(5px);
+    max-height: 5px;
+    min-height: var(--bar-height);
+    overflow: hidden;
+    color: var(--text-muted);
+    background-color: var(--background-primary);
+}
+
+.status-bar-item 
+{
+    margin: auto 0;
+}
+
+.status-bar-item > * 
+{
+    padding-top: var(--bar-vertical-padding) !important;
+    padding-bottom: var(--bar-vertical-padding) !important;
+}
+
+.nav-file-title.is-active 
+{
+    --background-secondary-alt: var(--interactive-accent);
+    --text-normal: #ffffff;
+}
+
+.nav-file:not(.is-active):hover .nav-file-title,
+.nav-folder:hover .nav-folder-content 
+{
+    background-color: var(--theme-color-translucent);
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.side-dock-plugin-panel-inner 
+{
+    padding-left: 6px;
+}
