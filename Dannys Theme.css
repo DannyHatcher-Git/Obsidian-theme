@@ -1,6 +1,5 @@
 
-/*............ MY FIRST OBSIDIAN THEME ....................*/
-
+/*............ DANNY OBSIDIAN THEME ....................*/
 
 :root
 {
@@ -10,16 +9,18 @@
     --Black: #131515;
     --DarkGrey:#373737;
     --LightGrey: #ded9e2;
+    --Yellow: #fffb00;
+    --white: #ffffff;
+    --LighterGrey: #f0f0f0;
 }
-/* using root colours as varialbe for reference for this theme */
-
-.theme.light
+.theme-light
 {
-    --text: var(--orange);
-}
-.theme.theme-dark
-{
-    --text: var(--blue) 
+    --interactive-accent:         var(--Orange); /*active pain color, moving pane color and menu button color in settings*/
+    --text-accent:                var(--Blue);
+    --text-accent-hover:          var(--Orange);
+    --interactive-accent-hover:   var(--Blue);
+    --text-highlight-bg:          var(--Yellow);
+    --text-on-accent:             var(--Black);
 }
 
 /*.................TEXT................*/
@@ -33,45 +34,64 @@ html,body /* Background is hardly seen (look for section colors)*/
 
 
 /*.................HEADERS.................*/
+
+
 .cm-header-1,
 .markdown-preview-section h1
 {
-    font-weight: 500 !important;
-    font-size: 34px !important;
+    font-weight: bold;
+    font-size: 35px !important;
     color: var(--Orange) !important;
+    padding-bottom: 1px;
+    border-bottom: 2px solid;
+    text-align: center;
 }
+
 .cm-header-2,
 .markdown-preview-view h2
 {
-    font-weight: 500;
-    font-size: 32px !important;
+    font-weight: bold;
+    font-size: 30px !important;
     color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
 }
 .cm-header-3,
 .markdown-preview-section h3
 {
-    font-weight: 500 !important;
-    font-size: 30px !important;
+    font-weight: 550 !important;
+    font-size: 25px !important;
     color: var(--Orange) !important;
-}.cm-header-4,
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+
+}
+.cm-header-4,
 .markdown-preview-section h4
 {
     font-weight: 500 !important;
-    font-size: 28px !important;
+    font-size: 22px !important;
     color: var(--Orange) !important;
-}.cm-header-5,
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+}
+.cm-header-5,
 .markdown-preview-section h5
 {
     font-weight: 500 !important;
-    font-size: 26px !important;
+    font-size: 20px !important;
     color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
 }
 .cm-header-6,
 .markdown-preview-section h6
 {
   font-weight: 500 !important;
-  font-size: 24px !important;
+  font-size: 18px !important;
   color: var(--Orange) !important;
+  padding-bottom: 0px;
+  border-bottom: 1px solid;
 }
 
 /*...........CODE BLOCK STYLING.......*/
@@ -95,6 +115,18 @@ html,body /* Background is hardly seen (look for section colors)*/
     font-size: 1em !important;
 }
 
+
+/* Popup Preview*/
+.popover.hover-popover {
+    position: absolute;
+    min-height: 350px;
+    width: 600px; /* was 400 */
+    overflow: overlay;      
+    padding: 0;
+    box-shadow: 0px 0px 3px 3px var(--Orange);
+  }
+
+
 /*..........SEARCH BAR..........*/
 .suggestion-item.is-selected /* Search bar highilght where curser is*/ 
 {
@@ -111,12 +143,12 @@ html,body /* Background is hardly seen (look for section colors)*/
 
 .external-link /*External link */
 {
-    color:var(--Orange)
+    color:var(--Blue);
 }
 
 .external-link:hover /* External link mouse hover */
 {
-    color: var(--Blue)
+    background-color: var(--Yellow)
 }
 
 .markdown-source-view
@@ -126,25 +158,55 @@ html,body /* Background is hardly seen (look for section colors)*/
 
 .internal-link /* Internal link in preview mode */
 {
-    color: var(--Orange)
+    color: var(--Orange);
+    text-decoration: none;
 }
 
 .cm-hmd-internal-link /* Internal link in editor view */ 
 {
     color:var(--Orange)!important; 
+    text-decoration: none;
 }
 
 .internal-link:hover
 {
-    color:var(--Blue)
+    color:var(--Blue);
 }
 
 /*..........MAIN WORKSPACE..........*/
+
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle
+{
+    width: 1px !important;
+    background-color: white;
+}
+
 .workspace-split.mod-vertical /* Writing panes */
 {
     color:black
 }
 
+/*..........TITLE BAR SECTIONS..........*/
+
+.titlebar-text
+{
+    color:var(--Black);
+    font-weight: bold;
+}
+
+.titlebar-button
+{
+    color:var(--Orange);
+}
+
+.titlebar
+{
+    background-color: var(--white);
+    text-align: right
+}
 .workspace-leaf-resize-handle /*Seporator lines between panels*/
 {
     background-color: white
@@ -152,7 +214,7 @@ html,body /* Background is hardly seen (look for section colors)*/
 
 .CodeMirror-lines /* Main pane display */
 {
-    background-color: white
+    background-color: white;
 }
 
 .CodeMirror.cm-s-obsidian /* Outer Main pane dislay */
@@ -160,38 +222,34 @@ html,body /* Background is hardly seen (look for section colors)*/
     background-color: white;
 }
 
+.CodeMirror-gutter.CodeMirror-foldgutter
+{
+    background-color: transparent;
+}
+
 .CodeMirror-vscrollbar /* Main pane side bar dislpays */
 {
-    background-color: white
+    background-color: white;
     border: 0px
 }
 
-.view-header /* Pane heder background color */
+.view-header-title-container::after
 {
-    background-color: white!important;
-    border: 0px
+    background: transparent
 }
 
-.view-header-icon /* Pane Header icon */
-{}
-
-.view-header-title /*Pane Header title */
-{}
-
-.view-action 
-{}
-
-.workspace-leaf.mod-active.view-header-title-container:after
+.view-header
 {
-    background-color: white !important;
-    background:white
+    background: linear-gradient(90deg, rgb(255, 136, 0) 0%, rgb(255, 255, 255) 15%)!important;
+    border: 0px;
+    text-align: center;
+    border-bottom-width: 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
 }
 
-
-.view-header-title-container:after
+.empty-state-container:hover
 {
-    background-color: white!important;
-    content: none;
+    border: 5px solid var(--Orange) !important;
 }
 
 
@@ -204,7 +262,7 @@ html,body /* Background is hardly seen (look for section colors)*/
 
 .graph-view.color-fill /*DEFAULT page */
 {
-    color: var(--Orange)
+    color: red
 }
 
 .graph-view.color-fill-highlight /* Hover page */
@@ -212,6 +270,12 @@ html,body /* Background is hardly seen (look for section colors)*/
     color: var(--Blue)
 }
 
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight
+{
+    color: var(--Orange) !important; /* action color (lines) */
+}
 
 
 /*..........TAB SECTION..........*/
@@ -270,12 +334,6 @@ html,body /* Background is hardly seen (look for section colors)*/
 }
 
 
-.workspace-tab-header.is-before-active
-.workspace-tab-header-inner
-.workspace-tab-header-inner-icon /*ICON: Before active*/
-{ 
-    color: white;
-} 
 
 /*..........AFTER TAB..........*/
 .workspace-tab-header.is-after-active /* After active tab curves at the bottom of the tab*/
@@ -315,6 +373,8 @@ background-color: var(--Orange);
 {
     color:white
 }
+
+
 
 /*..........FAR SIDE SECTIONS..........*/
 
@@ -357,7 +417,7 @@ background-color: var(--Orange);
     color:var(--Orange);
 }
 
-.workspace-ribbon-collapse-btn:hover /* Ribbon button */
+.workspace-ribbon-collapse-btn:hover /* Ribbon button on hover*/
 {
     color: var(--Blue)
 }
@@ -391,7 +451,7 @@ background-color: var(--Orange);
 #calendar-container {
   --color-background-heading: white 
   --color-background-day: var(--LightOrange);
-  --color-background-weeknum: green;
+  --color-background-weeknum: var(--white);
   --color-background-weekend: var(--LightOrange);
 
   --color-dot: var(--DarkGrey); /* dot colors */
@@ -402,8 +462,9 @@ background-color: var(--Orange);
   --color-text-heading: grey; /* Week heading */
   --color-text-day: grey; /* Day number */
   --color-text-today: var(--Orange); /*Today number */
-  --color-text-weeknum: var(--LightOrange); /* Week Number */
+  --color-text-weeknum: var(--Black); /* Week Number */
 }
+
 
 .day.has-note.active.svelte-q3wqg9 /*Highlighted day */
 {
@@ -415,21 +476,11 @@ background-color: var(--Orange);
     background-color: var(--Blue);
 }
 
-.title.svelte-1elemso .year.svelte-1elemso /*Calendar title */
+.title.svelte-1vwr9dd .year.svelte-1vwr9dd /*Calendar title */
 {
-    color:var(--Blue)
-}
-/*..........LINE NUMBER PLUGIN..........*/
-
-.CodeMirror-linenumber.CodeMirror-gutter-elt /* Line number */
-{
-    color: var(--Orange);
+    color:var(--Orange)
 }
 
-.CodeMirror-activeline-gutter .CodeMirror-linenumber /* Active Line Number */
-{
-    color: black
-}
 
 /*..........CHECKLIST PLUGIN..........*/
 
@@ -473,8 +524,8 @@ background-color: var(--Orange);
 
 .nav-folder-title-content /* Folder Sidebar content */
 {
-    background-color:var(--LightOrange) ;
-    color: white
+    background-color: var(--LightOrange);
+    color: var(--white);
 }
 
 
@@ -550,6 +601,128 @@ background-color: var(--Orange);
     color: white
 }
 
+/* Page buttons */
+.view-actions {
+    padding: 0;
+  }
+  
+  .view-action {
+    color: var(--text-normal) !important;
+    top: 1px;
+    margin: 5px 10px 0px 0px;
+    order: 3;
+  }
+  
+  .view-action[aria-label='Pin'] {
+    padding-top: 3px;
+    order: 2;
+  }
+  
+  .view-action[aria-label='Close'] {
+    order: 4;
+  }
+  
+  .view-action[aria-label='Unlink pane'] {
+    padding-top: 3px;
+    order: 1;
+  }
+  
+  .view-action > svg.cross,
+  .view-action > svg.vertical-three-dots,
+  .view-action > svg.pencil,
+  .view-action > svg.lines-of-text {
+    width: 12px;
+    height: 10px;
+    padding: 6px;
+    border-radius: 100px;
+  }
+  
+  .view-action > svg.cross {  
+    background-color: var(--Orange);
+  }
+  .view-action > svg.vertical-three-dots {
+    background-color: var(--Orange);
+  }
+  
+  .view-action > svg.pencil {
+    background-color: var(--Orange);
+  }
+  
+  .view-action > svg.lines-of-text {
+    background-color: var(--Orange);
+  }
+  
+  .view-action > svg.filled-pin {
+    padding: 1px;
+    color: var(--Blue) !important; 
+    opacity: 0.8;
+  }
+  
+  .view-action > svg.broken-link {
+    padding: 0px;
+    color: var(--Blue) !important; 
+    opacity: 0.8; 
+  }
+  
+  .view-action:hover > svg.cross,
+  .view-action:hover > svg.vertical-three-dots,
+  .view-action:hover > svg.pencil,
+  .view-action:hover > svg.lines-of-text {
+    width: 30px;
+    height: 30px;
+    padding: 2.5px;
+    border-radius: 100px;
+    color: var(--white);
+    transition: width, height 0.2s;
+  }
 
 
+/* adjust nav arrow locations */
+.nav-folder-collapse-indicator {
+    position: absolute;
+    left: 21px;
+    top: 3px;
+    transition: transform 20ms linear 0s;
+  }
 
+
+  .nav-folder-collapse-indicator::after {
+    position: absolute;
+    left: -3px;
+    top: 1px;
+    font-size: 15px;
+    font-family: 'Inter';
+    font-weight: bold;
+    color: var(--text-accent);
+    transition: transform 10ms linear 0s;
+  }
+
+  .nav-folder-collapse-indicator svg {
+    display: none;
+    color: var(--accent-strong);
+    height: 7px;
+    width: 7px;
+  }
+
+/* Block quote */
+.markdown-preview-view blockquote {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 8px;
+  border-right-width:0; 
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 7px;
+  border-color: var(--Orange);
+  background-color: var(--LighterGrey);
+  border-radius: 6px;
+  margin-inline-start: 7%;
+  margin-inline-end: 7%;
+}
+
+.markdown-preview-view blockquote p {
+  margin-left: 1px;
+  margin-right: 0px;
+  font-size: var(--font-size-preview-blockquote);
+}
