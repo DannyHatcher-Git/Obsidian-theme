@@ -4,12 +4,11 @@
 :root
 {
     --Orange: #ff8800;
-    --LightOrange: #ffb35c;
-    --Blue: #00e8fc;
+    --LightOrange: #ffc480;
+    --Blue: #0077ff;
     --Black: #131515;
     --DarkGrey:#373737;
-    --LightGrey: #ded9e2;
-    --Yellow: #fffb00;
+    --LightBlue: #9AC9FF;
     --white: #ffffff;
     --LighterGrey: #f0f0f0;
 }
@@ -19,17 +18,15 @@
     --text-accent:                var(--Blue);
     --text-accent-hover:          var(--Orange);
     --interactive-accent-hover:   var(--Blue);
-    --text-highlight-bg:          var(--Yellow);
+    --text-highlight-bg:          var(--LightBlue);
     --text-on-accent:             var(--Black);
 }
 
 /*.................TEXT................*/
 
-/* body is everything, font-family (fonts used) will go across until something is recognized*/
-
-html,body /* Background is hardly seen (look for section colors)*/
+html,body 
 { 
-    font-family: "Arial", "Impact"; 
+    font-family: "Arial"; 
 }
 
 /*.................HEADERS.................*/
@@ -142,12 +139,12 @@ html,body /* Background is hardly seen (look for section colors)*/
 
 .external-link /*External link */
 {
-    color:var(--Blue);
+    color:var(--Orange);
 }
 
 .external-link:hover /* External link mouse hover */
 {
-    background-color: var(--Yellow)
+    color:var(--Blue)
 }
 
 .markdown-source-view
@@ -455,7 +452,7 @@ background-color: var(--Orange);
 
   --color-dot: var(--DarkGrey); /* dot colors */
   --color-arrow: var(--Orange); /* Month nav arrows */
-  --color-button: yellow;
+  --color-button: var(--LightBlue);
 
   --color-text-title: grey ; /*month heading */
   --color-text-heading: grey; /* Week heading */
@@ -716,12 +713,6 @@ background-color: var(--Orange);
   border-color: var(--Orange);
   background-color: var(--LighterGrey);
   border-radius: 6px;
-  margin-inline-start: 7%;
-  margin-inline-end: 7%;
-}
-
-.markdown-preview-view blockquote p {
-  margin-left: 1px;
-  margin-right: 0px;
-  font-size: var(--font-size-preview-blockquote);
+  margin-inline-start: -10%;
+  margin-inline-end: 10%;
 }
