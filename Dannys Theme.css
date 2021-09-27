@@ -22,154 +22,9 @@
     --text-on-accent:             var(--Black);
 }
 
-/*.................TEXT................*/
-
-html,body 
-{ 
-    font-family: "Arial"; 
-}
-
-/*.................HEADERS.................*/
-
-
-.cm-header-1,
-.markdown-preview-section h1
-{
-    font-weight: bold;
-    font-size: 35px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 1px;
-    border-bottom: 2px solid;
-    text-align: center;
-}
-
-.cm-header-2,
-.markdown-preview-view h2
-{
-    font-weight: bold;
-    font-size: 30px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 1px solid;
-}
-.cm-header-3,
-.markdown-preview-section h3
-{
-    font-weight: 550 !important;
-    font-size: 25px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 1px solid;
-
-}
-.cm-header-4,
-.markdown-preview-section h4
-{
-    font-weight: 500 !important;
-    font-size: 22px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 1px solid;
-}
-.cm-header-5,
-.markdown-preview-section h5
-{
-    font-weight: 500 !important;
-    font-size: 20px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 1px solid;
-}
-.cm-header-6,
-.markdown-preview-section h6
-{
-  font-weight: 500 !important;
-  font-size: 18px !important;
-  color: var(--Orange) !important;
-  padding-bottom: 0px;
-  border-bottom: 1px solid;
-}
-
-/*...........CODE BLOCK STYLING.......*/
-
-/* code in ``` here``` colour (inline code)*/
-.markdown-preview-section pre code
-{
-    padding: 4px !important;
-    line-height: 1.4em !important;
-    display: block !important;
-    color: var(--Black) !important;
-}
-/* code in box - written words*/
-.markdown-preview-section code
-{
-    color: var(--Black) !important;
-}
-/* background of the code block in preview mode */
-.markdown-preview-section code
-{
-    font-size: 1em !important;
-}
-
-
-/* Popup Preview*/
-.popover.hover-popover {
-    position: absolute;
-    min-height: 350px;
-    width: 600px; /* was 400 */
-    overflow: overlay;      
-    padding: 0;
-    box-shadow: 0px 0px 3px 3px var(--Orange);
-  }
-
-
-/*..........SEARCH BAR..........*/
-.suggestion-item.is-selected /* Search bar highilght where curser is*/ 
-{
-    background-color:var(--Orange) ;
-    color: white
-}
-
-
-/*..........URL COLOR - EDIOTR MODE..........*/
-.cm-url
-{
-    color: var(--Blue)!important;
-}
-
-.external-link /*External link */
-{
-    color:var(--Orange);
-}
-
-.external-link:hover /* External link mouse hover */
-{
-    color:var(--Blue)
-}
-
-.markdown-source-view
-{
-    background-color: white
-}
-
-.internal-link /* Internal link in preview mode */
-{
-    color: var(--Orange);
-    text-decoration: none;
-}
-
-.cm-hmd-internal-link /* Internal link in editor view */ 
-{
-    color:var(--Orange)!important; 
-    text-decoration: none;
-}
-
-.internal-link:hover
-{
-    color:var(--Blue);
-}
-
+/*..................................*/
 /*..........MAIN WORKSPACE..........*/
+/*..................................*/
 
 
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
@@ -183,6 +38,11 @@ html,body
 .workspace-split.mod-vertical /* Writing panes */
 {
     color:black
+}
+
+html,body /*Text*/
+{ 
+    font-family: "Arial"; 
 }
 
 /*..........TITLE BAR SECTIONS..........*/
@@ -252,326 +112,6 @@ html,body
 .CodeMirror-cursor /* The curser formatting */
 {
     background-color: var(--Orange) !important;
-}
-
-/*..........GRAPH VIEW..........*/
-
-.graph-view.color-fill /*DEFAULT page */
-{
-    color: red
-}
-
-.graph-view.color-fill-highlight /* Hover page */
-{
-    color: var(--Blue)
-}
-
-.graph-view.color-circle,
-.graph-view.color-fill-highlight,
-.graph-view.color-line-highlight
-{
-    color: var(--Orange) !important; /* action color (lines) */
-}
-
-
-/*..........TAB SECTION..........*/
-
-.workspace-tabs /* Bakcground tab section*/
-{
-    background-color: white;
-}
-
-.workspace-tab-container-before.is-before-active
-.workspace-tab-header-inner
-{
-    background-color: white
-}
-
-.workspace-tab-container-after.is-after-active
-.workspace-tab-header-inner
-{
-    background-color: white
-}
-
-.workspace-tab-header-container /*Side background tab */
-{
-    background-color: white ;
-}
-.workspace-tab-container-before /*Left sidebar corner next to tab */
-{
-    background-color: white;
-}
-
-.workspace-tab-container-after /* right sidebar corner next to tab*/
-{
-    background-color: white;
-}
-
-
-/*..........INACTIVE TAB..........*/
-
-.workspace-tab-container-inner /*Tab not active or next to active */
-{
-    background-color: var(--LightOrange);
-}
-
-
-/*.......... BEFORE TAB..........*/
-
-.workspace-tab-header.is-before-active /*before active tab (curves at the bottom of the tab)*/
-{
-    background-color: var(--Orange)
-}
-
-.workspace-tab-header.is-before-active
-.workspace-tab-header-inner /* Before active tab*/
-{
-    background-color: var(--LightOrange); 
-}
-
-
-
-/*..........AFTER TAB..........*/
-.workspace-tab-header.is-after-active /* After active tab curves at the bottom of the tab*/
-{
-    background-color: var(--Orange) 
-}
-
-.workspace-tab-header.is-after-active
-.workspace-tab-header-inner /* After active tab*/
-{
-    background-color: var(--LightOrange);
-}
-
-
-.workspace-tab-header.is-after-active
-.workspace-tab-header-inner
-.workspace-tab-header-inner-icon /*ICON: After active */ 
-{
-    color:white
-}
-
-/*..........ACTIVE TAB..........*/
-
-.workspace-tab-header.is-active /* Is active tab*/
-{}
-
-.workspace-tab-header.is-active
-.workspace-tab-header-inner /* After active tab*/
-{
-background-color: var(--Orange);
-}
-
-
-.workspace-tab-header.is-active
-.workspace-tab-header-inner
-.workspace-tab-header-inner-icon /*ICON: After active */ 
-{
-    color:white
-}
-
-
-
-/*..........FAR SIDE SECTIONS..........*/
-
-.workspace-ribbon /*both side backgrounds*/
-{
-    background-color:white ;
-    border:white
-}
-
-.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed
-{
-    background-color: white
-}
-
-.workspace-ribbon.workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed
-{
-    background-color: white
-}
-
-.side-dock-actions /*DEFAULT: left side actions */
-{
-    background-color: var(--blue);
-}
-
-.side-dock-ribbon-action /*left sidebar actions*/
-{
-    background-color: var(--Orange); 
-    color: white;
-}
-
-.side-dock-ribbon-action:hover
-{
-    background-color: var(--Blue);
-    color: white
-}
-
-.workspace-ribbon-collapse-btn /*Side bar collapse buttons*/
-{
-    background-color:var(--blue);
-    color:var(--Orange);
-}
-
-.workspace-ribbon-collapse-btn:hover /* Ribbon button on hover*/
-{
-    color: var(--Blue)
-}
-
-.workspace-ribbon-collapse-btn>svg /* Icon SVG section */
-{
-    stroke-width: 10;
-}
-
-.workspace-ribbon.side-dock-ribbon
-{}
-
-/*..........SIDE BAR SECTION..........*/
-
-.workspace-leaf-content /* DEFAULT: Left Sidebar */
-{
-    background-color: white;
-    color: white;
-}
-
-
-.workspace-leaf-content /* DEFAULT: Right Sidebar */
-.view-content
-{
-    background-color: white;
-    color: black
-}
-
-/*..........CALENDAR PLUGIN..........*/ 
-
-#calendar-container {
-  --color-background-heading: white 
-  --color-background-day: var(--LightOrange);
-  --color-background-weeknum: var(--white);
-  --color-background-weekend: var(--LightOrange);
-
-  --color-dot: var(--DarkGrey); /* dot colors */
-  --color-arrow: var(--Orange); /* Month nav arrows */
-  --color-button: var(--LightBlue);
-
-  --color-text-title: grey ; /*month heading */
-  --color-text-heading: grey; /* Week heading */
-  --color-text-day: grey; /* Day number */
-  --color-text-today: var(--Orange); /*Today number */
-  --color-text-weeknum: var(--Black); /* Week Number */
-}
-
-
-.day.has-note.active.svelte-q3wqg9 /*Highlighted day */
-{
-    background-color: var(--Orange);
-}
-
-.day.has-note.active.svelte-q3wqg9:hover /* Highlighed day hover */
-{
-    background-color: var(--Blue);
-}
-
-.title.svelte-1vwr9dd .year.svelte-1vwr9dd /*Calendar title */
-{
-    color:var(--Orange)
-}
-
-
-/*..........CHECKLIST PLUGIN..........*/
-
-.todo-text.svelte-sak9cb /* todo item */
-{}
-
-.todo-text.svelte-sak9cb
-.link-item.svelte-1ggcaxe
-{
-    color: var(--Orange)
-}
-
-.nav-files-container /*Files section*/
-{
-    background-color: white;
-}
-
-.tag-container /* Tags sections */
-{
-    background-color: white;
-}
-
-.tag /* Preview mode # */
-{
-    color:var(--Orange)
-}
-
-.tag:hover /* preview mode # hover */
-{
-    color:var(--Blue)
-}
-.search-result-container /* Search sections */
-{
-    background-color:white
-}
-
-.item-list /* Starred Section */
-{
-    background-color: white
-}
-
-.nav-folder-title-content /* Folder Sidebar content */
-{
-    background-color: var(--LightOrange);
-    color: var(--white);
-}
-
-
-.tag-pane-tag-count.tree-item-flair /* Tag number display */
-{
-    background-color: var(--LightOrange);
-    color: white 
-}
-
-.tag-pane-tag-count.tree-item-flair:hover
-{}
-
-
-.tree-item-inner /* Search result display */
-{}
-
-.tree-item-self.search-result-file-title:hover /*Search result hover*/
-{}
-
-.tree-item-self.is-clickable:hover /* Search item hover */
-.tree-item-flair 
-{
-    background-color: var(--Blue)
-}
-
-.tree-item-flair /* Item Number display */
-{
-    background-color: var(--LightOrange);
-    color: white
-}
-
-.search-result-file-match /* Matched result display */
-{
-    background-color:var(--LightOrange);
-    color:white
-}
-
-.search-result-file-match:hover
-{
-    background-color: var(--Blue)
-}
-
-.search-input-clear-button /* Search Bar exit button */
-{
-   color: black
-}
-
-.search-input-clear-button:hover
-{
-    color:var(--Orange)
 }
 
 /*..........NAV BUTTONS..........*/
@@ -716,3 +256,466 @@ background-color: var(--Orange);
   margin-inline-start: -10%;
   margin-inline-end: 10%;
 }
+
+/*..........HEADERS..........*/
+
+
+.cm-header-1,
+.markdown-preview-section h1
+{
+    font-weight: bold;
+    font-size: 35px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 1px;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+
+.cm-header-2,
+.markdown-preview-view h2
+{
+    font-weight: bold;
+    font-size: 30px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+}
+.cm-header-3,
+.markdown-preview-section h3
+{
+    font-weight: 550 !important;
+    font-size: 25px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+
+}
+.cm-header-4,
+.markdown-preview-section h4
+{
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+}
+.cm-header-5,
+.markdown-preview-section h5
+{
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+}
+.cm-header-6,
+.markdown-preview-section h6
+{
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  color: var(--Orange) !important;
+  padding-bottom: 0px;
+  border-bottom: 1px solid;
+}
+
+/*..........CODE BLOCK STYLING..........*/
+
+/* code in ``` here``` colour (inline code)*/
+.markdown-preview-section pre code
+{
+    padding: 4px !important;
+    line-height: 1.4em !important;
+    display: block !important;
+    color: var(--Black) !important;
+}
+
+/* code in box - written words*/
+.markdown-preview-section code
+{
+    color: var(--Black) !important;
+}
+/* background of the code block in preview mode */
+.markdown-preview-section code
+{
+    font-size: 1em !important;
+}
+
+
+/* Popup Preview*/
+.popover.hover-popover {
+    position: absolute;
+    min-height: 350px;
+    width: 600px; /* was 400 */
+    overflow: overlay;      
+    padding: 0;
+    box-shadow: 0px 0px 3px 3px var(--Orange);
+  }
+
+
+/*..........SEARCH BAR..........*/
+
+.suggestion-item.is-selected /* Search bar highilght where curser is*/ 
+{
+    background-color:var(--Orange) ;
+    color: white
+}
+
+
+/*..........URL COLOR - EDIOTR MODE..........*/
+.cm-url
+{
+    color: var(--Blue)!important;
+}
+
+.external-link /*External link */
+{
+    color:var(--Orange);
+}
+
+.external-link:hover /* External link mouse hover */
+{
+    color:var(--Blue)
+}
+
+.markdown-source-view
+{
+    background-color: white
+}
+
+.internal-link /* Internal link in preview mode */
+{
+    color: var(--Orange);
+    text-decoration: none;
+}
+
+.cm-hmd-internal-link /* Internal link in editor view */ 
+{
+    color:var(--Orange)!important; 
+    text-decoration: none;
+}
+
+.internal-link:hover
+{
+    color:var(--Blue);
+}
+
+/*..........GRAPH VIEW..........*/
+
+.graph-view.color-fill /*DEFAULT page */
+{
+    color: red
+}
+
+.graph-view.color-fill-highlight /* Hover page */
+{
+    color: var(--Blue)
+}
+
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight
+{
+    color: var(--Orange) !important; /* action color (lines) */
+}
+
+
+/*..........TAB SECTION..........*/
+
+.workspace-tabs /* Bakcground tab section*/
+{
+    background-color: white;
+}
+
+.workspace-tab-container-before.is-before-active
+.workspace-tab-header-inner
+{
+    background-color: white
+}
+
+.workspace-tab-container-after.is-after-active
+.workspace-tab-header-inner
+{
+    background-color: white
+}
+
+.workspace-tab-header-container /*Side background tab */
+{
+    background-color: white ;
+}
+.workspace-tab-container-before /*Left sidebar corner next to tab */
+{
+    background-color: white;
+}
+
+.workspace-tab-container-after /* right sidebar corner next to tab*/
+{
+    background-color: white;
+}
+
+
+/*..........INACTIVE TAB..........*/
+
+.workspace-tab-container-inner /*Tab not active or next to active */
+{
+    background-color: var(--LightOrange);
+}
+
+/*.......... BEFORE TAB..........*/
+
+.workspace-tab-header.is-before-active /*before active tab (curves at the bottom of the tab)*/
+{
+    background-color: var(--Orange)
+}
+
+.workspace-tab-header.is-before-active
+.workspace-tab-header-inner /* Before active tab*/
+{
+    background-color: var(--LightOrange); 
+}
+
+/*..........AFTER TAB..........*/
+.workspace-tab-header.is-after-active /* After active tab curves at the bottom of the tab*/
+{
+    background-color: var(--Orange) 
+}
+
+.workspace-tab-header.is-after-active
+.workspace-tab-header-inner /* After active tab*/
+{
+    background-color: var(--LightOrange);
+}
+
+
+.workspace-tab-header.is-after-active
+.workspace-tab-header-inner
+.workspace-tab-header-inner-icon /*ICON: After active */ 
+{
+    color:white
+}
+
+/*..........ACTIVE TAB..........*/
+
+.workspace-tab-header.is-active /* Is active tab*/
+{}
+
+.workspace-tab-header.is-active
+.workspace-tab-header-inner /* After active tab*/
+{
+background-color: var(--Orange);
+}
+
+
+.workspace-tab-header.is-active
+.workspace-tab-header-inner
+.workspace-tab-header-inner-icon /*ICON: After active */ 
+{
+    color:white
+}
+
+/*..........FAR SIDE SECTIONS..........*/
+
+.workspace-ribbon /*both side backgrounds*/
+{
+    background-color:white ;
+    border:white
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed
+{
+    background-color: white
+}
+
+.workspace-ribbon.workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed
+{
+    background-color: white
+}
+
+.side-dock-actions /*DEFAULT: left side actions */
+{
+    background-color: var(--blue);
+}
+
+.side-dock-ribbon-action /*left sidebar actions*/
+{
+    background-color: var(--Orange); 
+    color: white;
+}
+
+.side-dock-ribbon-action:hover
+{
+    background-color: var(--Blue);
+    color: white
+}
+
+.workspace-ribbon-collapse-btn /*Side bar collapse buttons*/
+{
+    background-color:var(--blue);
+    color:var(--Orange);
+}
+
+.workspace-ribbon-collapse-btn:hover /* Ribbon button on hover*/
+{
+    color: var(--Blue)
+}
+
+.workspace-ribbon-collapse-btn>svg /* Icon SVG section */
+{
+    stroke-width: 10;
+}
+
+.workspace-ribbon.side-dock-ribbon
+{}
+
+/*..........SIDE BAR SECTION..........*/
+
+.workspace-leaf-content /* DEFAULT: Left Sidebar */
+{
+    background-color: white;
+    color: white;
+}
+
+
+.workspace-leaf-content /* DEFAULT: Right Sidebar */
+.view-content
+{
+    background-color: white;
+    color: black
+}
+
+/*............................*/
+/*..........PLUG INS..........*/
+/*............................*/
+
+/*..........CALENDAR PLUGIN..........*/ 
+
+#calendar-container {
+  --color-background-heading: white 
+  --color-background-day: var(--LightOrange);
+  --color-background-weeknum: var(--white);
+  --color-background-weekend: var(--LightOrange);
+
+  --color-dot: var(--DarkGrey); /* dot colors */
+  --color-arrow: var(--Orange); /* Month nav arrows */
+  --color-button: var(--LightBlue);
+
+  --color-text-title: grey ; /*month heading */
+  --color-text-heading: grey; /* Week heading */
+  --color-text-day: grey; /* Day number */
+  --color-text-today: var(--Orange); /*Today number */
+  --color-text-weeknum: var(--Black); /* Week Number */
+}
+
+
+.day.has-note.active.svelte-q3wqg9 /*Highlighted day */
+{
+    background-color: var(--Orange);
+}
+
+.day.has-note.active.svelte-q3wqg9:hover /* Highlighed day hover */
+{
+    background-color: var(--Blue);
+}
+
+.title.svelte-1vwr9dd .year.svelte-1vwr9dd /*Calendar title */
+{
+    color:var(--Orange)
+}
+
+
+/*..........CHECKLIST PLUGIN..........*/
+
+.todo-text.svelte-sak9cb /* todo item */
+{}
+
+.todo-text.svelte-sak9cb
+.link-item.svelte-1ggcaxe
+{
+    color: var(--Orange)
+}
+
+.nav-files-container /*Files section*/
+{
+    background-color: white;
+}
+
+.tag-container /* Tags sections */
+{
+    background-color: white;
+}
+
+.tag /* Preview mode # */
+{
+    color:var(--Orange)
+}
+
+.tag:hover /* preview mode # hover */
+{
+    color:var(--Blue)
+}
+.search-result-container /* Search sections */
+{
+    background-color:white
+}
+
+.item-list /* Starred Section */
+{
+    background-color: white
+}
+
+.nav-folder-title-content /* Folder Sidebar content */
+{
+    background-color: var(--LightOrange);
+    color: var(--white);
+}
+
+
+.tag-pane-tag-count.tree-item-flair /* Tag number display */
+{
+    background-color: var(--LightOrange);
+    color: white 
+}
+
+.tag-pane-tag-count.tree-item-flair:hover
+{}
+
+
+.tree-item-inner /* Search result display */
+{}
+
+.tree-item-self.search-result-file-title:hover /*Search result hover*/
+{}
+
+.tree-item-self.is-clickable:hover /* Search item hover */
+.tree-item-flair 
+{
+    background-color: var(--Blue)
+}
+
+.tree-item-flair /* Item Number display */
+{
+    background-color: var(--LightOrange);
+    color: white
+}
+
+.search-result-file-match /* Matched result display */
+{
+    background-color:var(--LightOrange);
+    color:white
+}
+
+.search-result-file-match:hover
+{
+    background-color: var(--Blue)
+}
+
+.search-input-clear-button /* Search Bar exit button */
+{
+   color: black
+}
+
+.search-input-clear-button:hover
+{
+    color:var(--Orange)
+}
+
+
