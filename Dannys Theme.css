@@ -41,6 +41,16 @@ html,body /*Text*/
     font-family: "Arial"; 
 }
 
+span.cm-strong, /*bold*/
+strong
+{
+    color: var(--Orange);
+}
+span.cm-em, /* Italics*/
+em
+{
+    color: var(--Orange)
+}
 /*..........TITLE BAR SECTIONS..........*/
 
 .titlebar-text
@@ -90,6 +100,11 @@ html,body /*Text*/
     background: transparent
 }
 
+.workspace-leaf.mod-active .view-header 
+{
+    background-color: pink;
+}
+
 .view-header
 {
     background: linear-gradient(90deg, rgb(255, 136, 0) 0%, rgb(255, 255, 255) 15%)!important;
@@ -109,6 +124,8 @@ html,body /*Text*/
 {
     background-color: var(--Orange) !important;
 }
+
+
 
 /*..........NAV BUTTONS..........*/
 
@@ -290,6 +307,11 @@ html,body /*Text*/
     transform: translate3d(0px, -3px, 0px);
     border-color: var(--Blue);
 }
+
+/*..........IMAGES..........*/
+
+.internal-embed.image-embed
+{}
 
 /*..........HEADERS..........*/
 /*...........................*/
