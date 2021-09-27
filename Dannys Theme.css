@@ -35,10 +35,6 @@
     background-color: white;
 }
 
-.workspace-split.mod-vertical /* Writing panes */
-{
-    color:black
-}
 
 html,body /*Text*/
 { 
@@ -241,7 +237,8 @@ html,body /*Text*/
   }
 
 /* Block quote */
-.markdown-preview-view blockquote {
+.markdown-preview-view blockquote 
+{
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 10px;
@@ -249,12 +246,49 @@ html,body /*Text*/
   border-right-width:0; 
   border-top-width: 0px;
   border-bottom-width: 0px;
-  border-left-width: 7px;
+  border-left-width: 9px;
   border-color: var(--Orange);
   background-color: var(--LighterGrey);
-  border-radius: 6px;
-  margin-inline-start: -10%;
+  border-radius: 8px;
+  margin-inline-start: -8%;
   margin-inline-end: 10%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.markdown-preview-view blockquote:hover
+{
+    border-color: var(--Blue);
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translate3d(0px, -3px, 0px);
+}
+
+/* Block Embeds (block references */
+
+.internal-embed .markdown-embed
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-right-width:0; 
+    border-top-width: 0px;
+    border-bottom-width: 2px;
+    border-left-width: 10px;
+    border-color: var(--Orange);
+    background-color: var(--LighterGrey);
+    border-radius: 8px;
+    margin-inline-start: 0%;
+    margin-inline-end: 10%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.internal-embed .markdown-embed:hover 
+{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translate3d(0px, -3px, 0px);
+    border-color: var(--Blue);
 }
 
 /*..........HEADERS..........*/
@@ -267,7 +301,7 @@ html,body /*Text*/
     font-size: 35px !important;
     color: var(--Orange) !important;
     padding-bottom: 1px;
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     text-align: center;
 }
 
@@ -278,22 +312,22 @@ html,body /*Text*/
     font-size: 30px !important;
     color: var(--Orange) !important;
     padding-bottom: 0px;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
 }
 .cm-header-3,
 .markdown-preview-section h3
 {
-    font-weight: 550 !important;
+    font-weight: 600 !important;
     font-size: 25px !important;
     color: var(--Orange) !important;
     padding-bottom: 0px;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
 
 }
 .cm-header-4,
 .markdown-preview-section h4
 {
-    font-weight: 500 !important;
+    font-weight: 550 !important;
     font-size: 22px !important;
     color: var(--Orange) !important;
     padding-bottom: 0px;
@@ -361,20 +395,21 @@ html,body /*Text*/
 }
 
 
-/*..........URL COLOR - EDIOTR MODE..........*/
+/*..........INTERNAL AND EXTERNAL LINKS..........*/
 .cm-url
 {
     color: var(--Blue)!important;
 }
 
+/* EXTERNAL LINKS*/
 .external-link /*External link */
 {
-    color:var(--Orange);
+    color:var(--Blue);
 }
 
 .external-link:hover /* External link mouse hover */
 {
-    color:var(--Blue)
+    color:var(--Orange)
 }
 
 .markdown-source-view
@@ -382,10 +417,13 @@ html,body /*Text*/
     background-color: white
 }
 
+/* INTERNAL LINKS */
+
 .internal-link /* Internal link in preview mode */
 {
     color: var(--Orange);
     text-decoration: none;
+
 }
 
 .cm-hmd-internal-link /* Internal link in editor view */ 
@@ -398,6 +436,14 @@ html,body /*Text*/
 {
     color:var(--Blue);
 }
+
+.footnote-link:hover
+{}
+
+/*..........TASK BOX..........*/
+
+.task-list-item-checkbox
+{}
 
 /*..........GRAPH VIEW..........*/
 
