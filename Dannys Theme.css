@@ -734,7 +734,10 @@ div.CodeMirror-foldgutter-folded::after
 }
 
 .footnote-link:hover
-{}
+{
+    color: var(--Orange);
+    background-color:#FFE8CD ;
+}
 
 /*..........TASK BOX..........*/
 
@@ -1036,7 +1039,7 @@ background-color: var(--Orange);
 .tree-item-flair /* Item Number display */
 {
     background-color: var(--LightOrange);
-    color: white
+    color: var(--white)
 }
 
 .search-result-file-match /* Expanded search results */
@@ -1267,7 +1270,7 @@ background-color: var(--Orange);
     padding-top: var(--bar-vertical-padding) !important;
     padding-bottom: var(--bar-vertical-padding) !important;
 }
-
+/*
 .nav-file-title.is-active 
 {
     --background-secondary-alt: var(--interactive-accent);
