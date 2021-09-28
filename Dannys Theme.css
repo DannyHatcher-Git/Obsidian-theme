@@ -1,5 +1,8 @@
 
 /*............ DANNY OBSIDIAN THEME ....................*/
+/*............ PREVIEW MODE ....................*/
+/*............ EDITOR MODE ....................*/
+/*............ WORKSPACE ....................*/
 
 :root
 {
@@ -23,11 +26,10 @@
     --text-on-accent:             var(--white);
 }
 
-/*..................................*/
-/*..........MAIN WORKSPACE..........*/
-/*..................................*/
 
+/*..........PREVIEW..........*/
 
+/*PAGE PREVIEW*/
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle
@@ -36,253 +38,168 @@
     background-color: white;
 }
 
-
-html,body /*Text*/
+/*TEXT PREVIEW*/
+html,body
 { 
     font-family: "Arial"; 
 }
 
-.CodeMirror-activeline
-{
-    background-color: var(--LighterBlue);
-}
-
+/*BOLD PREVIEW*/
 span.cm-strong, /*bold*/
 strong
 {
     color: var(--Orange);
 }
-span.cm-em, /* Italics*/
+/*ITALICS PREVIEW*/
+span.cm-em,
 em
 {
     color: var(--Orange)
 }
-/*..........TITLE BAR SECTIONS..........*/
 
-.titlebar-text
+/*HEADER 1 PREVIEW*/
+.cm-header-1,
+.markdown-preview-section h1
 {
-    color:var(--Black);
     font-weight: bold;
-}
-
-.titlebar-button
-{
-    color:var(--Orange);
-}
-
-.titlebar
-{
-    background-color: var(--white);
-    text-align: right
-}
-.workspace-leaf-resize-handle /*Seporator lines between panels*/
-{
-    background-color: white
-}
-
-.CodeMirror-lines /* Main pane display */
-{
-    background-color: white;
-}
-
-.CodeMirror.cm-s-obsidian /* Outer Main pane dislay */
-{
-    background-color: white;
-}
-
-.CodeMirror-gutter.CodeMirror-foldgutter
-{
-    background-color: transparent;
-}
-
-.CodeMirror-vscrollbar /* Main pane side bar dislpays */
-{
-    background-color: white;
-    border: 0px
-}
-
-.view-header-title-container::after
-{
-    background: transparent
-}
-
-/* PAGE HEADER */
-.workspace-leaf.mod-active .view-header 
-{
-    background-color: var(--Blue);
-    border-bottom: 3px solid var(--Orange); 
-}
-
-.workspace-leaf.mod-active .view-header
-{
-    background: linear-gradient(90deg, rgb(255, 136, 0) 0%, rgb(255, 255, 255) 15%)!important;
-    border: 0px;
+    font-size: 35px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 1px;
+    border-bottom: 3px solid;
     text-align: center;
-    border-bottom-width: 0;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
 }
-
-.view-header
+/*HEADER 2 PREVIEW*/
+.cm-header-2,
+.markdown-preview-view h2
 {
-    background: var(--white);
-    border: 0px;
-    text-align: center;
-    border-bottom-width: 0;
-    border-color: var(--Orange);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
-}
-
-/*change color when hover*/
-.titlebar-button.mod-back:hover,
-.titlebar-button.mod-forward:hover {
-  color: var(--Blue);
-  transform: scale(1.2);
-}
-
-.titlebar-button.mod-maximize:hover, 
-.titlebar-button.mod-minimize:hover,
-.workspace-ribbon-collapse-btn:hover,
-.workspace-tab-header.is-active:hover{
-  color: var(--Blue);
-}
-
-.workspace-tab-header:hover {
-  color: var(--Blue);
-  background-color: var(--Blue);
-}
-
-.CodeMirror-cursor /* The curser formatting */
-{
-    background-color: var(--Orange) !important;
-}
-
-/*..........PLUGIN BUTTON OPTIONS..........*/
-
-.nav-buttons-container /* Button container section */
-{}
-
-.nav-action-button /* Inactive buttons */
-{
-    background-color: var(--LightOrange);
-    color:white 
-}
-
-.nav-action-button.is-active /* Active button */
-{
-    background-color: var(--Orange);
-    color: white
-}
-
-.nav-action-button:hover 
-{
-    background-color: var(--Blue);
-    color: white
-}
-
-/* Page buttons */
-.view-actions {
-    padding: 0;
-  }
-  
-  .view-action {
-    color: var(--text-normal) !important;
-    top: 1px;
-    margin: 5px 10px 0px 0px;
-    order: 3;
-  }
-  
-  .view-action[aria-label='Pin'] {
-    padding-top: 3px;
-    order: 2;
-  }
-  
-  .view-action[aria-label='Close'] {
-    order: 4;
-  }
-  
-  .view-action[aria-label='Unlink pane'] {
-    padding-top: 3px;
-    order: 1;
-  }
-  
-  .view-action > svg.cross,
-  .view-action > svg.vertical-three-dots,
-  .view-action > svg.pencil,
-  .view-action > svg.lines-of-text {
-    width: 12px;
-    height: 10px;
-    padding: 6px;
-    border-radius: 100px;
-  }
-  
-  .view-action > svg.cross {  
-    background-color: var(--Orange);
-  }
-  .view-action > svg.vertical-three-dots {
-    background-color: var(--Orange);
-  }
-  
-  .view-action > svg.pencil {
-    background-color: var(--Orange);
-  }
-  
-  .view-action > svg.lines-of-text {
-    background-color: var(--Orange);
-  }
-  
-  .view-action > svg.filled-pin {
-    padding: 1px;
-    color: var(--Blue) !important; 
-    opacity: 0.8;
-  }
-  
-  .view-action > svg.broken-link {
-    padding: 0px;
-    color: var(--Blue) !important; 
-    opacity: 0.8; 
-  }
-  
-  .view-action:hover > svg.cross,
-  .view-action:hover > svg.vertical-three-dots,
-  .view-action:hover > svg.pencil,
-  .view-action:hover > svg.lines-of-text {
-    width: 30px;
-    height: 30px;
-    padding: 2.5px;
-    border-radius: 100px;
-    color: var(--white);
-    transition: width, height 0.2s;
-  }
-
-
-/* adjust nav arrow locations */
-.nav-folder-collapse-indicator {
-    position: absolute;
-    left: 21px;
-    top: 3px;
-    transition: transform 20ms linear 0s;
-  }
-
-
-  .nav-folder-collapse-indicator::after {
-    position: absolute;
-    left: -3px;
-    top: 1px;
-    font-size: 15px;
-    font-family: 'Inter';
     font-weight: bold;
-    color: var(--text-accent);
-    transition: transform 10ms linear 0s;
-  }
+    font-size: 30px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 2px solid;
+}
+/*HEADER 3 PREVIEW*/
+.cm-header-3,
+.markdown-preview-section h3
+{
+    font-weight: 600 !important;
+    font-size: 25px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 2px solid;
 
-  .nav-folder-collapse-indicator svg {
-    display: none;
-    color: var(--accent-strong);
-    height: 7px;
-    width: 7px;
-  }
+}
+/*HEADER 4 PREVIEW*/
+.cm-header-4,
+.markdown-preview-section h4
+{
+    font-weight: 550 !important;
+    font-size: 22px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+}
+/*HEADER 5 PREVIEW*/
+.cm-header-5,
+.markdown-preview-section h5
+{
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    color: var(--Orange) !important;
+    padding-bottom: 0px;
+    border-bottom: 1px solid;
+}
+/*HEADER 6 PREVIEW*/
+.cm-header-6,
+.markdown-preview-section h6
+{
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  color: var(--Orange) !important;
+  padding-bottom: 0px;
+  border-bottom: 1px solid;
+}
 
-/* Block quote */
+/*HEADING COLLAPSE ICON PREVIEW*/
+.markdown-preview-view div.is-collapsed h1::after,
+.markdown-preview-view div.is-collapsed h2::after,
+.markdown-preview-view div.is-collapsed h3::after, 
+.markdown-preview-view div.is-collapsed h4::after, 
+.markdown-preview-view div.is-collapsed h5::after, 
+.markdown-preview-view div.is-collapsed h6::after,
+.markdown-preview-view ol .is-collapsed::after, 
+.markdown-preview-view ul .is-collapsed::after {
+  content: "...";
+  padding: 5px;
+  color: var(--Blue);
+}
+
+/*HEADER 1 AND 2 ARROW LOCATION PREVIEW*/
+h1 div.heading-collapse-indicator.collapse-indicator,
+h2 div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  padding-left: 10px;
+  margin-top: 13px;
+  transition: transform 20ms linear 0s;
+}
+/*HEADER 1 AND 2 ARROW PREVIEW*/
+h1 div.heading-collapse-indicator.collapse-indicator::before,
+h2 div.heading-collapse-indicator.collapse-indicator::before {
+  content : "↓";
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Inter';
+  margin-left: -2px;
+  margin-top: -6px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+  opacity: 0;
+}
+/*HEADER TOGGLE HIDE PREVIEW*/
+.heading-collapse-indicator.collapse-indicator.collapse-icon svg 
+{
+  display: none;
+}
+/*HEADER 3,4,5,6 ARROW PREVIEW*/
+div.heading-collapse-indicator.collapse-indicator::before 
+{
+  content : "↓";
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Inter';
+  margin-left: -2px;
+  margin-top: 1px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+  opacity: 0;
+}
+/*HEADER 1 AND 2 COLLAPSE ARROW LOCATION PREVIEW*/
+div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator 
+{
+  transform: translateX(1px) translateY(18px) rotate(-90deg);
+  opacity: 0.5;
+}
+/*HEADER 3,4,5,6 COLLAPSE ARROW LOCATION PREVIEW*/
+div.is-collapsed div.heading-collapse-indicator.collapse-indicator 
+{
+  transform: translateX(-8px) translateY(20px) rotate(-90deg);
+  opacity: 0.5;
+}
+/*HEADER ARROW HOVER PREVIEW*/
+h1:hover div.heading-collapse-indicator.collapse-indicator::before,
+h2:hover div.heading-collapse-indicator.collapse-indicator::before,
+h3:hover div.heading-collapse-indicator.collapse-indicator::before,
+h4:hover div.heading-collapse-indicator.collapse-indicator::before,
+h5:hover div.heading-collapse-indicator.collapse-indicator::before,
+h6:hover div.heading-collapse-indicator.collapse-indicator::before 
+{
+  opacity: 1;
+}
+
+/*QUOTE BLOCK PREVIEW*/
 .markdown-preview-view blockquote 
 {
   padding-top: 8px;
@@ -301,6 +218,7 @@ em
   box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
+/*QUOTE BLOCK HOVER PREVIEW*/
 .markdown-preview-view blockquote:hover
 {
     border-color: var(--Blue);
@@ -309,32 +227,7 @@ em
     transform: translate3d(0px, -3px, 0px);
 }
 
-/* QUOTE BLOCK EDIT MODE */
-
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
-    color: transparent !important;
-  }
-  
-  .CodeMirror-line span.cm-formatting-quote {
-    color: var(--red) !important;
-  }
-  
-  div:not(.CodeMirror-activeline) > .HyperMD-quote {
-    border-left: 7px solid var(--Orange);
-    border-radius: 6px;
-    background-color: var(--LighterGrey);
-  }
-  
-  div.CodeMirror-activeline > .HyperMD-quote {
-    border-left: 7px solid var(--Orange);
-    border-radius: 6px;
-  }
-  
-  .cm-quote:not([class*="link"]):not([class*="string"]) {
-    color: var(--Black);
-  }
-
-/* CHECKMARK */
+/*CHECKMARK PREVIEW*/
 .markdown-preview-view .task-list-item-checkbox 
 {
    -webkit-appearance: none;
@@ -349,18 +242,18 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
    cursor: pointer;
    left: 1px;
 }
-  
+/*CHECKMARK BOX CHECKED PREVIEW*/
 .markdown-preview-view .task-list-item-checkbox:checked 
 {
    border: none;
    background-color: var(--Orange);
 }
-
+/*CHECKMARK BOX CHECKED HOVER PREVIEW*/
 .markdown-preview-view .task-list-item-checkbox:checked:hover 
 {
     background-color: var(--Blue);
 }
-
+/*CHECKMARK BOX UNCHECKED PREVIEW*/
 .markdown-preview-view .task-list-item-checkbox:checked::before {
    content: ' ';
    position: absolute;
@@ -373,45 +266,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
 }
 
-/* CHECKMARK EDIT MODE*/
-
-span.cm-formatting-task 
-{
-   display: inline !important; 
-}
-  
-span.cm-formatting-task.cm-property 
-{
-   color: var(--text-accent);
-} 
-  
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta,
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property 
-{
-   color: transparent;
-   position: relative;
-}
-  
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta:after,
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property:after 
-{
-   content: "☐";
-   position: absolute;
-   top: 3px;
-   left: 6px;
-   color: var(--text-normal);
-   font-size: 1.3em;
-   font-family: Arial, serif;
-}
-  
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property:after 
-{
-   content: "☑";
-   color: var(--Orange) !important;
-}
-
-/* Block Embeds (block references */
-
+/*EMBED PREVIEW*/
 .internal-embed .markdown-embed
 {
     padding-top: 0px;
@@ -430,7 +285,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
     box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
     text-align: center;
 }
-
+/*EMBED HOVER PREVIEW*/
 .internal-embed .markdown-embed:hover 
 {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -438,167 +293,70 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
     border-color: var(--Blue);
 }
 
-/*..........IMAGES..........*/
-
-.internal-embed.image-embed
-{}
-
-/*..........HEADERS..........*/
-/*...........................*/
-
-.cm-header-1,
-.markdown-preview-section h1
+/*CODE BLOCK PREVIEW*/
+.markdown-preview-section code
 {
-    font-weight: bold;
-    font-size: 35px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 1px;
-    border-bottom: 3px solid;
-    text-align: center;
+    color: var(--Black) !important;
+    font-size: 1em;
 }
 
-.cm-header-2,
-.markdown-preview-view h2
+/*INTERNAL LINKS PREVIEW*/
+a,
+.markdown-preview-view .internal-link 
 {
-    font-weight: bold;
-    font-size: 30px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 2px solid;
+  text-decoration: none;
+  color: var(--Orange);
 }
-.cm-header-3,
-.markdown-preview-section h3
+
+/*INTERNAL LINKS HOVER PREVIEW*/
+.internal-link:hover
 {
-    font-weight: 600 !important;
-    font-size: 25px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 2px solid;
-
+    color: var(--Blue);
+    background-color:var(--LighterBlue);
 }
-.cm-header-4,
-.markdown-preview-section h4
+
+/* EXTERNAL LINK PREVIEW*/
+.external-link
 {
-    font-weight: 550 !important;
-    font-size: 22px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 1px solid;
+    color:var(--Orange);
+    text-decoration: underline;
 }
-.cm-header-5,
-.markdown-preview-section h5
+/*EXTERNAL LINK HOVER PREVIEW*/
+.external-link:hover
 {
-    font-weight: 500 !important;
-    font-size: 20px !important;
-    color: var(--Orange) !important;
-    padding-bottom: 0px;
-    border-bottom: 1px solid;
+    color:var(--Blue);
+    background-color: #CDE4FF;
 }
-.cm-header-6,
-.markdown-preview-section h6
+
+/*FOOTNOTE HOVER PREVIEW*/
+.footnote-link:hover
 {
-  font-weight: 500 !important;
-  font-size: 18px !important;
-  color: var(--Orange) !important;
-  padding-bottom: 0px;
-  border-bottom: 1px solid;
+    color: var(--Orange);
+    background-color:#FFE8CD ;
 }
 
+/*..........EDITOR..........*/
 
-/* headering collaspe indicators */
-
-.markdown-preview-view div.is-collapsed h1::after,
-.markdown-preview-view div.is-collapsed h2::after,
-.markdown-preview-view div.is-collapsed h3::after, 
-.markdown-preview-view div.is-collapsed h4::after, 
-.markdown-preview-view div.is-collapsed h5::after, 
-.markdown-preview-view div.is-collapsed h6::after,
-.markdown-preview-view ol .is-collapsed::after, 
-.markdown-preview-view ul .is-collapsed::after {
-  content: "...";
-  padding: 5px;
-  color: var(--text-faint);
-}
-
-div.heading-collapse-indicator.collapse-indicator {
-  position: absolute;
-  padding-left: 10px;
-  transition: transform 20ms linear 0s;
-}
-
-h1 div.heading-collapse-indicator.collapse-indicator,
-h2 div.heading-collapse-indicator.collapse-indicator {
-  position: absolute;
-  padding-left: 10px;
-  margin-top: 13px;
-  transition: transform 20ms linear 0s;
-}
-
-h1 div.heading-collapse-indicator.collapse-indicator::before,
-h2 div.heading-collapse-indicator.collapse-indicator::before {
-  content : "↓";
-  position: absolute;
-  font-size: 17px;
-  font-weight: bold;
-  font-family: 'Inter';
-  margin-left: -2px;
-  margin-top: -6px;
-  color: var(--text-accent);
-  transition: transform 10ms linear 0s;
-  opacity: 0;
-}
-
-.heading-collapse-indicator.collapse-indicator.collapse-icon svg 
+/*ACTIVE CURSER LINE EDIT*/
+.CodeMirror-activeline
 {
-  display: none;
+    background-color: var(--LighterBlue);
 }
 
-div.heading-collapse-indicator.collapse-indicator::before 
+/*PAGE EDIT*/
+.CodeMirror-lines
 {
-  content : "↓";
-  position: absolute;
-  font-size: 17px;
-  font-weight: bold;
-  font-family: 'Inter';
-  margin-left: -2px;
-  margin-top: 1px;
-  color: var(--text-accent);
-  transition: transform 10ms linear 0s;
-  opacity: 0;
+    background-color: var(--white);
 }
 
-div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator 
-{
-  transform: translateX(3px) translateY(10px) rotate(-90deg);
-  opacity: 0.5;
-}
-
-div.is-collapsed div.heading-collapse-indicator.collapse-indicator 
-{
-  transform: translateX(-8px) translateY(20px) rotate(-90deg);
-  opacity: 0.5;
-}
-
-h1:hover div.heading-collapse-indicator.collapse-indicator::before,
-h2:hover div.heading-collapse-indicator.collapse-indicator::before,
-h3:hover div.heading-collapse-indicator.collapse-indicator::before,
-h4:hover div.heading-collapse-indicator.collapse-indicator::before,
-h5:hover div.heading-collapse-indicator.collapse-indicator::before,
-h6:hover div.heading-collapse-indicator.collapse-indicator::before 
-{
-  opacity: 1;
-}
-
-/* headering collaspe indicators in edit */
-
+/*HEADER ARROW LOCATION EDIT*/
 div.CodeMirror-foldgutter-open 
 {
     left: 5px;
     position: absolute;
     transition: transform 20ms linear 0s;
 }
-  
+/*HEADER ARROW EDIT*/
 div.CodeMirror-foldgutter-open::after 
 {
   content : "↓";
@@ -611,13 +369,13 @@ div.CodeMirror-foldgutter-open::after
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
 }
-  
+/*HEADER FOLDED ARROW EDIT*/
 div.CodeMirror-foldgutter-folded 
 { 
    position: absolute;
    transition: transform 20ms linear 0s;
 }
-  
+/*HEADER COLLAPSED EDIT*/
 div.CodeMirror-foldgutter-folded::after 
 {
   content : "→";
@@ -632,183 +390,369 @@ div.CodeMirror-foldgutter-folded::after
   transition: transform 10ms linear 0s;
 }
 
-/*..........CODE BLOCK STYLING..........*/
-
-/* code in ``` here``` colour (inline code)*/
-.markdown-preview-section pre code
+/*PAGE SIDEBAR EDIT*/
+.CodeMirror-vscrollbar
 {
-    padding: 4px !important;
-    line-height: 1.4em !important;
-    display: block !important;
-    color: var(--Black) !important;
+    background-color: var(--white);
+    border: 0px
 }
 
-/* code in box - written words*/
-.markdown-preview-section code
+/*QUOTE BLOCK HIDE > EDIT*/
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote 
 {
-    color: var(--Black) !important;
+    color: transparent !important;
 }
-/* background of the code block in preview mode */
-.markdown-preview-section code
+/*QUOTE BLOCK LOOK EDIT*/
+div:not(.CodeMirror-activeline) > .HyperMD-quote 
 {
-    font-size: 1em !important;
+    border-left: 7px solid var(--Orange);
+    border-radius: 6px;
+    background-color: var(--LighterGrey);
 }
-
-
-/* Popup Preview*/
-.popover.hover-popover {
-    position: absolute;
-    min-height: 350px;
-    width: 600px; /* was 400 */
-    overflow: overlay;      
-    padding: 0;
-    box-shadow: 0px 0px 3px 3px var(--Orange);
-  }
-
-
-/*..........SEARCH BAR..........*/
-
-.suggestion-item.is-selected /* Search bar highilght where curser is*/ 
+/*QUOTE BLOCK WHEN EDITING LOOK EDIT*/
+div.CodeMirror-activeline > .HyperMD-quote 
 {
-    background-color:var(--Orange);
-    color: white
+    border-left: 7px solid var(--Orange);
+    border-radius: 6px;
+}
+/*QUOTE BLOCK WHEN EDIT*/
+.cm-quote:not([class*="link"]):not([class*="string"]) 
+{
+    color: var(--Black);
 }
 
-
-/*..........INTERNAL AND EXTERNAL LINKS..........*/
-.cm-url
+/*CHECKMARK ACTIVE EDIT*/
+span.cm-formatting-task.cm-property 
 {
-    color: var(--Blue)!important;
+   color: var(--Blue);
+} 
+
+/*CHECKMARK POSITIONING EDIT*/
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property 
+{
+   color: transparent;
+   position: relative;
+}
+/*CHECKMARK UNCHECKED EDIT*/
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta:after,
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property:after 
+{
+   content: "☐";
+   position: absolute;
+   top: 3px;
+   left: 6px;
+   color: var(--text-normal);
+   font-size: 1.3em;
+   font-family: Arial, serif;
+}
+/*CHECKMARK CHECKED EDIT*/
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property:after 
+{
+   content: "☑";
+   color: var(--Orange) !important;
 }
 
-/* EXTERNAL LINKS*/
-.external-link /*External link */
-{
-    color:var(--Orange);
-    text-decoration: underline;
-}
-
-.external-link:hover /* External link mouse hover */
-{
-    color:var(--Blue);
-    background-color: #CDE4FF;
-}
-
+/*PAGE TOGGLE EDIT*/
 .markdown-source-view
 {
-    background-color: white
+    background-color: var(--white)
 }
 
-/* INTERNAL LINKS */
-
-.internal-link /* Internal link in preview mode */
+/*EXTERNAL LINKS EDIT*/
+.cm-url
 {
-    color: var(--Orange);
-    text-decoration: none;
+    color: var(--Orange)!important;
 }
 
-a,
-.markdown-preview-view .internal-link 
-{
-  text-decoration: none;
-}
-
-.cm-hmd-internal-link /* Internal link in editor view */ 
+/*INTERNAL LINK EDIT*/
+.cm-hmd-internal-link
 {
     color:var(--Orange)!important; 
     text-decoration: none;
 }
+/*..........WORKSPACE..........*/
 
-.internal-link:hover
+/*OBSIDIAN VAULT AND VERSION*/
+.titlebar-text
+{
+    color:var(--Orange);
+    font-weight: bold;
+}
+/*BACK FORWARD MINIMIZE MAXIMIZE AND EXIT*/
+.titlebar-button
+{
+    color:var(--Orange);
+    transform: scale(1.2);
+}
+/*BACK FORWARD MINIMIZE MAXIMIZE AND EXIT HOVER*/
+.titlebar-button.mod-maximize:hover, 
+.titlebar-button.mod-minimize:hover,
+.workspace-ribbon-collapse-btn:hover,
+.titlebar-button.mod-back:hover,
+.titlebar-button.mod-forward:hover,
+.workspace-tab-header.is-active:hover
+{
+  color: var(--Blue);
+  transform: scale(1.4);
+}
+
+/*TOP BAR*/
+.titlebar
+{
+    background-color: var(--white);
+    text-align: right
+}
+
+/*ACTIVE PAGE HEADER*/
+.workspace-leaf.mod-active .view-header
+{
+    background: linear-gradient(90deg, rgb(255, 136, 0) 0%, rgb(255, 255, 255) 15%)!important;
+    border: 0px;
+    text-align: center;
+    border-bottom-width: 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
+}
+/*INACTIVE PAGE HEADER*/
+.view-header
+{
+    background: var(--white);
+    border: 0px;
+    text-align: center;
+    border-bottom-width: 0;
+    border-color: var(--Orange);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
+}
+
+/*INACTIVE PAGE HEADER SECTION*/
+.view-header-title-container::after
+{
+    background: transparent
+}
+
+/*PAGE EDIT OPTION EXIT LOCATION*/
+.view-action 
+{
+   top: 1px;
+   margin: 5px 10px 0px 0px;
+   order: 3;
+   padding: 10;
+}
+/*PIN ICON LOCATION*/
+.view-action[aria-label='Pin'] 
+{
+    padding-top: 1px;
+    order: 2;
+}
+/*CLOSE ICON LOCATION*/
+.view-action[aria-label='Close'] 
+{
+    order: 4;
+}
+/*UNLINK ICON LOCATION*/
+.view-action[aria-label='Unlink pane'] 
+{
+    padding-top: 2px;
+    order: 1;
+    color: var(--Blue);
+}
+/*ICON LOCATION*/
+.view-action > svg.cross,
+.view-action > svg.vertical-three-dots,
+.view-action > svg.pencil,
+.view-action > svg.lines-of-text 
+{
+    width: 12px;
+    height: 10px;
+    padding: 6px;
+    border-radius: 100px;
+}
+
+/*PAGE CROSS ICON*/
+.view-action > svg.cross 
+{  
+    background-color: var(--Orange);
+}
+/*PAGE OPTION ICON*/
+.view-action > svg.vertical-three-dots 
+{
+    background-color: var(--Orange);
+}
+/*PAGE EDIT ICON*/
+.view-action > svg.pencil 
+{
+    background-color: var(--Orange);
+}
+/*PAGE PREVIEW ICON*/
+.view-action > svg.lines-of-text 
+{
+    background-color: var(--Orange);
+}
+/*PAGE PIN ICON*/
+.view-action > svg.filled-pin 
+{
+    padding: 1px;
+    color: var(--Blue) !important; 
+    opacity: 0.8;
+}
+/*PAGE LINK ICON*/
+.view-action > svg.broken-link 
+{
+    padding: 0px;
+    color: var(--Blue) !important; 
+    opacity: 0.8; 
+}
+/*PAGE ICON LOCATIONS*/
+.view-action:hover > svg.cross,
+.view-action:hover > svg.vertical-three-dots,
+.view-action:hover > svg.pencil,
+.view-action:hover > svg.lines-of-text 
+{
+    width: 30px;
+    height: 30px;
+    padding: 2.5px;
+    border-radius: 100px;
+    color: var(--white);
+    transition: width, height 0.2s;
+}
+
+/*ACTIVE PLUGIN TAB*/
+.nav-action-button.is-active /* Active button */
+{
+    background-color: var(--Orange);
+    color: white
+}
+
+/*INACTIVE PLUGIN TABS*/
+.nav-action-button 
+{
+    background-color: var(--LightOrange);
+    color:white 
+}
+
+/*PLUGIN ICON HOVER*/
+.workspace-tab-header:hover 
 {
     color: var(--Blue);
-    background-color:var(--LighterBlue);
 }
 
-.footnote-link:hover
+/*HORIZONTAL SEPORATOR LINES BETWEEN PLUGIN PANELS*/
+.workspace-leaf-resize-handle
 {
-    color: var(--Orange);
-    background-color:#FFE8CD ;
+    background-color: var(--white)
 }
 
-/*..........TASK BOX..........*/
-
-.task-list-item-checkbox
-{}
-
-/*..........GRAPH VIEW..........*/
-
-.graph-view.color-fill /*DEFAULT page */
+/*PLUGIN OPTION TAB HOVER*/
+.nav-action-button:hover 
 {
-    color: red
+    background-color: var(--Blue);
+    color: white
 }
 
-.graph-view.color-fill-highlight /* Hover page */
-{
-    color: var(--Blue)
-}
-
-.graph-view.color-circle,
-.graph-view.color-fill-highlight,
-.graph-view.color-line-highlight
-{
-    color: var(--Orange) !important; /* action color (lines) */
-}
-
-
-/*..........TAB SECTION..........*/
-
-.workspace-tabs /* Bakcground tab section*/
-{
-    background-color: white;
-}
-
+/*PLUGIN TAB ICONS BAR BEFORE*/
 .workspace-tab-container-before.is-before-active
 .workspace-tab-header-inner
 {
     background-color: var(--white)
 }
-
+/*PLUGIN TAB ICONS BAR AFTER*/
 .workspace-tab-container-after.is-after-active
 .workspace-tab-header-inner
 {
     background-color: var(--white)
 }
-
-.workspace-tab-header-container /*Side background tab */
+/*PLUGIN TAB ICON CONTAINER*/
+.workspace-tab-header-container
 {
     background-color: var(--white) ;
 }
-.workspace-tab-container-before /*Left sidebar corner next to tab */
+/*PLUGIN TAB ICON CONTAINER BEFORE*/
+.workspace-tab-container-before
+{
+    background-color: var(--white);
+}
+/*PLUGIN TAB ICON CONTAINER AFTER*/
+.workspace-tab-container-after
 {
     background-color: var(--white);
 }
 
-.workspace-tab-container-after /* right sidebar corner next to tab*/
+/*INACTIVE PLUGIN TAB*/
+.workspace-tab-container-inner
 {
-    background-color: var(--white);
+    background-color: var(--LightOrange);
 }
 
-
-/*..........INACTIVE TAB..........*/
-
-.workspace-tab-container-inner /*Tab not active or next to active */
-{
-    background-color: pink;
-}
-
-/*.......... BEFORE TAB..........*/
-
+/*PLUGIN TAB BEFORE ACTIVE*/
 .workspace-tab-header.is-before-active
 {
     background-color: var(--Orange)
 }
-
+/*PLUGIN TAB BEFORE INNER ACTIVE*/
 .workspace-tab-header.is-before-active
-.workspace-tab-header-inner /* Before active tab*/
+.workspace-tab-header-inner
 {
     background-color: var(--LightOrange); 
 }
+
+/*GRAPH VIEW NODE FILL*/
+.graph-view.color-fill
+{
+    color: red
+}
+/*GRAPH VIEW INTERACTION*/
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight
+{
+    color: var(--Orange) !important;
+}
+
+
+/*..........PLUGINS..........*/
+/*..........FILE EXPLORER..........*/
+
+/*FILE EXPLORER HIDE ICONS*/
+.nav-folder-collapse-indicator svg 
+{
+    display: none;
+    color: var(--accent-strong);
+    height: 7px;
+    width: 7px;
+}
+
+/*PAGE PREVIEW PLUGIN*/
+.popover.hover-popover 
+{
+    position: absolute;
+    min-height: 350px;
+    width: 600px;
+    overflow: overlay;      
+    padding: 0;
+    box-shadow: 0px 0px 3px 3px var(--Orange);
+}
+
+/*SEARCH PLUGIN*/
+.suggestion-item.is-selected
+{
+    background-color:var(--Orange);
+    color: white
+}
+---
+/* ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? */
+
+.CodeMirror.cm-s-obsidian /* Outer Main pane dislay ????? */
+{
+    background-color: blue;
+}
+
+.CodeMirror-gutter.CodeMirror-foldgutter /*??*/
+{
+    background-color: transparent;
+}
+
+/* ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? */
+
 
 /*..........AFTER TAB..........*/
 .workspace-tab-header.is-after-active /* After active tab curves at the bottom of the tab*/
@@ -919,9 +863,8 @@ a,
     color: black
 }
 
-/*............................*/
 /*..........PLUG INS..........*/
-/*............................*/
+
 
 /*..........CALENDAR PLUGIN..........*/ 
 
@@ -1044,6 +987,7 @@ a,
     background-color: var(--LighterGrey)
 }
 /* Backlink arrow icons */
+
 .backlink-pane .search-result-container .collapse-icon {
     left: 0px;
     top: 7px;
@@ -1057,14 +1001,14 @@ a,
     font-size: 14px;
     font-family: 'Inter';
     font-weight: bold;
-    color: var(--text-accent);
+    color: var(--Blue);
     transition: transform 10ms linear 0s;
 }
 
 .backlink-pane .search-result-container .collapse-icon svg 
 {
     display: none;
-    color:var(--accent-strong);
+    color:var(--Blue);
     height:7px;
     width:7px;
 }
@@ -1075,7 +1019,15 @@ a,
     opacity: 0.5;
 }
 
-/* Search result arrow icons */
+.tree-item-icon
+{
+    color:var(--LightOrange)
+}
+
+.tree-item-icon:hover
+{
+    color:var(--Orange)
+}
 
 .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon 
 {
@@ -1092,7 +1044,7 @@ a,
     margin-left: 0px;
     font-weight: bold;
     font-family: 'Inter';
-    color: var(--text-accent);
+    color: var(--Blue);
     transition: transform 10ms linear 0s;
 }
 
@@ -1229,9 +1181,6 @@ a,
     word-break: break-word !important;
     white-space: break-spaces !important;
 }
-  
-
-
 
 
 /* BOTTOM STATUS BAR */ 
@@ -1261,23 +1210,4 @@ a,
 {
     padding-top: var(--bar-vertical-padding) !important;
     padding-bottom: var(--bar-vertical-padding) !important;
-}
-/*
-.nav-file-title.is-active 
-{
-    --background-secondary-alt: var(--interactive-accent);
-    --text-normal: #ffffff;
-}
-
-.nav-file:not(.is-active):hover .nav-file-title,
-.nav-folder:hover .nav-folder-content 
-{
-    background-color: var(--theme-color-translucent);
-    color: #ffffff;
-    font-weight: 500;
-}
-
-.side-dock-plugin-panel-inner 
-{
-    padding-left: 6px;
 }
