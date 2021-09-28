@@ -9,6 +9,7 @@
     --Black: #131515;
     --DarkGrey:#373737;
     --LightBlue: #9AC9FF;
+    --LighterBlue: #CDE4FF;
     --white: #ffffff;
     --LighterGrey: #f0f0f0;
 }
@@ -39,6 +40,11 @@
 html,body /*Text*/
 { 
     font-family: "Arial"; 
+}
+
+.CodeMirror-activeline
+{
+    background-color: var(--LighterBlue);
 }
 
 span.cm-strong, /*bold*/
@@ -716,7 +722,7 @@ a,
 .internal-link:hover
 {
     color: var(--Blue);
-    background-color: #CDE4FF;
+    background-color:var(--LighterBlue);
 }
 
 .footnote-link:hover
