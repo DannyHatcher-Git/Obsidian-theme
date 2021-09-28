@@ -107,7 +107,7 @@ em
     border-bottom: 3px solid var(--Orange); 
 }
 
-.view-header
+.workspace-leaf.mod-active .view-header
 {
     background: linear-gradient(90deg, rgb(255, 136, 0) 0%, rgb(255, 255, 255) 15%)!important;
     border: 0px;
@@ -116,6 +116,15 @@ em
     box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
 }
 
+.view-header
+{
+    background: var(--white);
+    border: 0px;
+    text-align: center;
+    border-bottom-width: 0;
+    border-color: var(--Orange);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
+}
 
 /*change color when hover*/
 .titlebar-button.mod-back:hover,
@@ -669,7 +678,8 @@ div.CodeMirror-foldgutter-folded::after
 /* EXTERNAL LINKS*/
 .external-link /*External link */
 {
-    color:var(--Blue);
+    color:var(--Orange);
+    text-decoration: underline;
 }
 
 .external-link:hover /* External link mouse hover */
@@ -689,7 +699,6 @@ div.CodeMirror-foldgutter-folded::after
 {
     color: var(--Orange);
     text-decoration: none;
-
 }
 
 a,
