@@ -133,44 +133,15 @@ em
 
 .workspace-tab-header:hover {
   color: var(--Blue);
-  text-align: center;
-  stroke-width: 2px;
-  cursor: pointer;
+  background-color: var(--Blue);
 }
-
-.workspace-tab-header.is-active {
-  color: var(--Blue);
-}
-
-.titlebar-button {
-  -webkit-app-region: no-drag;
-  padding: 0 9px;
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.titlebar-button:hover {
-  opacity: 1;
-}
-
-.workspace-tab-header-inner {
-  padding: 3px 9px;
-}
-
-.empty-state-container:hover
-{
-    border: 5px solid var(--Orange) !important;
-}
-
 
 .CodeMirror-cursor /* The curser formatting */
 {
     background-color: var(--Orange) !important;
 }
 
-
-
-/*..........NAV BUTTONS..........*/
+/*..........PLUGIN BUTTON OPTIONS..........*/
 
 .nav-buttons-container /* Button container section */
 {}
@@ -721,6 +692,12 @@ div.CodeMirror-foldgutter-folded::after
 
 }
 
+a,
+.markdown-preview-view .internal-link 
+{
+  text-decoration: none;
+}
+
 .cm-hmd-internal-link /* Internal link in editor view */ 
 {
     color:var(--Orange)!important; 
@@ -774,27 +751,27 @@ div.CodeMirror-foldgutter-folded::after
 .workspace-tab-container-before.is-before-active
 .workspace-tab-header-inner
 {
-    background-color: white
+    background-color: var(--white)
 }
 
 .workspace-tab-container-after.is-after-active
 .workspace-tab-header-inner
 {
-    background-color: white
+    background-color: var(--white)
 }
 
 .workspace-tab-header-container /*Side background tab */
 {
-    background-color: white ;
+    background-color: var(--white) ;
 }
 .workspace-tab-container-before /*Left sidebar corner next to tab */
 {
-    background-color: white;
+    background-color: var(--white);
 }
 
 .workspace-tab-container-after /* right sidebar corner next to tab*/
 {
-    background-color: white;
+    background-color: var(--white);
 }
 
 
@@ -802,12 +779,12 @@ div.CodeMirror-foldgutter-folded::after
 
 .workspace-tab-container-inner /*Tab not active or next to active */
 {
-    background-color: var(--LightOrange);
+    background-color: pink;
 }
 
 /*.......... BEFORE TAB..........*/
 
-.workspace-tab-header.is-before-active /*before active tab (curves at the bottom of the tab)*/
+.workspace-tab-header.is-before-active
 {
     background-color: var(--Orange)
 }
@@ -846,7 +823,7 @@ div.CodeMirror-foldgutter-folded::after
 .workspace-tab-header.is-active
 .workspace-tab-header-inner /* After active tab*/
 {
-background-color: var(--Orange);
+    background-color: var(--Orange);
 }
 
 
