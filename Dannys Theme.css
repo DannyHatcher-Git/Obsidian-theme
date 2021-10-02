@@ -54,7 +54,7 @@ strong
 span.cm-em,
 em
 {
-    color: var(--Orange)
+    color: var(--Black);
 }
 
 /*HEADER 1 PREVIEW*/
@@ -334,7 +334,15 @@ a,
     color: var(--Orange);
     background-color:#FFE8CD ;
 }
+/*FOOTNOTE*/
+a,
+.footnote.link
+{
+    color: var(--Blue)
+}
 
+.footnotes
+{}
 /*..........EDITOR..........*/
 
 /*ACTIVE CURSER LINE EDIT*/
@@ -388,6 +396,11 @@ div.CodeMirror-foldgutter-folded::after
   color: var(--text-accent);
   opacity: 0.5;
   transition: transform 10ms linear 0s;
+}
+
+.HyperMD-codeblock-end .CodeMirror-line
+{
+    background-color: var(--white);
 }
 
 /*PAGE SIDEBAR EDIT*/
@@ -513,6 +526,13 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
     border-bottom-width: 0;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
 }
+
+/*ACTIVE PAGE HEADER CONTAINER*/
+.workspace-leaf.mod-active .view-header-title-container::after
+{
+    background: transparent;
+}
+
 /*INACTIVE PAGE HEADER*/
 .view-header
 {
@@ -708,6 +728,18 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
     color: var(--Orange) !important;
 }
 
+/*AFTER ACTIVE TAB CURVE*/
+.workspace-tab-header.is-after-active
+{
+    background-color: var(--Orange) 
+}
+
+/*AFTER ACTIVE TAB*/
+.workspace-tab-header.is-after-active
+.workspace-tab-header-inner
+{
+    background-color: var(--LightOrange);
+}
 
 /*..........PLUGINS..........*/
 /*..........FILE EXPLORER..........*/
@@ -736,7 +768,18 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .suggestion-item.is-selected
 {
     background-color:var(--Orange);
-    color: white
+    color: var(--white)
+}
+
+/*SEARCH BAR EXIT*/
+.search-input-clear-button /* Search Bar exit button */
+{
+   color: var(--Orange)
+}
+/*SEARCH BAR EXIT HOVER*/
+.search-input-clear-button:hover
+{
+    color:var(--Blue)
 }
 ---
 /* ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? */
@@ -755,16 +798,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 
 
 /*..........AFTER TAB..........*/
-.workspace-tab-header.is-after-active /* After active tab curves at the bottom of the tab*/
-{
-    background-color: var(--Orange) 
-}
 
-.workspace-tab-header.is-after-active
-.workspace-tab-header-inner /* After active tab*/
-{
-    background-color: var(--LightOrange);
-}
+
 
 
 .workspace-tab-header.is-after-active
@@ -1147,16 +1182,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 
-/* Search */
-.search-input-clear-button /* Search Bar exit button */
-{
-   color: var(--Black)
-}
 
-.search-input-clear-button:hover
-{
-    color:var(--LighterGrey)
-}
 
 /*table hover*/
 .markdown-preview-view td:hover
