@@ -517,6 +517,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
     text-align: right
 }
 
+
 /*ACTIVE PAGE HEADER*/
 .workspace-leaf.mod-active .view-header
 {
@@ -530,7 +531,12 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 /*ACTIVE PAGE HEADER CONTAINER*/
 .workspace-leaf.mod-active .view-header-title-container::after
 {
-    background: transparent;
+    background: var(--white);
+}
+/*ACTIVE LONG PAGE CONTAINER*/
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after 
+{
+    background: var(--white)
 }
 
 /*INACTIVE PAGE HEADER*/
