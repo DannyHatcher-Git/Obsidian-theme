@@ -334,7 +334,7 @@ a,
     color: var(--Orange);
     background-color:#FFE8CD ;
 }
-/*FOOTNOTE*/
+/*FOOTNOTE PREVIEW*/
 a,
 .footnote.link
 {
@@ -343,6 +343,25 @@ a,
 
 .footnotes
 {}
+
+/*TABLE HOVER PREVIEW*/
+.markdown-preview-view td:hover
+{
+    background-color: var(--Orange);
+}
+
+/*TABLE INACTIVE HOVER PREVIEW*/
+.markdown-preview-view tr:hover
+{
+    background-color: var(--LightOrange);
+}
+
+/*TABLE HEADERS PREVIEW*/
+.markdown-preview-view th
+{
+    background-color: var(--LightOrange);
+}
+
 /*..........EDITOR..........*/
 
 /*ACTIVE CURSER LINE EDIT*/
@@ -1190,29 +1209,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 
 
 
-/*table hover*/
-.markdown-preview-view td:hover
-{
-    background-color: var(--Orange);
-}
 
-/*table raw hover*/
-.markdown-preview-view tr:hover
-{
-    background-color: var(--LightOrange);
-}
 
-.markdown-preview-view th:hover
-{
-    background-color: var(--LightOrange);
-}
-
-.HyperMD-table-row.CodeMirror-line 
-{
-    word-wrap: break-word !important;
-    word-break: break-word !important;
-    white-space: break-spaces !important;
-}
 
 
 /* BOTTOM STATUS BAR */ 
