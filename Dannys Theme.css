@@ -48,7 +48,7 @@ html,body
 span.cm-strong, /*bold*/
 strong
 {
-    color: var(--Orange);
+    color: var(--Black);
 }
 /*ITALICS PREVIEW*/
 span.cm-em,
@@ -285,6 +285,14 @@ h6:hover div.heading-collapse-indicator.collapse-indicator::before
     box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
     text-align: center;
 }
+
+/*CENTRE IMAGE*/
+span img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*EMBED HOVER PREVIEW*/
 .internal-embed .markdown-embed:hover 
 {
@@ -743,7 +751,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 /*GRAPH VIEW NODE FILL*/
 .graph-view.color-fill
 {
-    color: red
+    color: var(--Blue)
 }
 /*GRAPH VIEW INTERACTION*/
 .graph-view.color-circle,
