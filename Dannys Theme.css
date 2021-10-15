@@ -213,7 +213,7 @@ h6:hover div.heading-collapse-indicator.collapse-indicator::before
   border-color: var(--Orange);
   background-color: var(--LighterGrey);
   border-radius: 8px;
-  margin-inline-start: -8%;
+  margin-inline-start: 10%;
   margin-inline-end: 10%;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 5px rgba(0,0,0,0.1);
   text-align: center;
@@ -286,13 +286,37 @@ h6:hover div.heading-collapse-indicator.collapse-indicator::before
     text-align: center;
 }
 
-/*CENTRE IMAGE*/
+/*CENTRE IMAGE PREVIEW*/
 span img {
     display:block;
     margin-left: auto;
     margin-right: auto;
 }
 
+/*IMAGE MOUSE HOVER PREVIEW*/
+.workspace-leaf-content[data-type="markdown"] .view-content  img:not([class="emoji"]) 
+{
+    cursor: zoom-in;
+    padding: 5px;
+    display: block;
+}
+/*IMAGE IMAGE ZOOM PREVIEW*/
+.view-content img:not([class="emoji"]):active 
+{
+    cursor: zoom-out !important;    
+    position: fixed;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+    height:100%;
+    width: 100%;
+    margin: 1px auto 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+}
 /*EMBED HOVER PREVIEW*/
 .internal-embed .markdown-embed:hover 
 {
@@ -370,7 +394,7 @@ a,
     background-color: var(--LightOrange);
 }
 
-/*BULLET LIST COLLAPSE ARROW*/
+/*BULLET LIST COLLAPSE ARROW PREVIEW*/
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before 
 {
     content : "↓";
@@ -382,7 +406,7 @@ a,
     transition: transform 10ms linear 0s;
 }
 
-/*BULLET LIST HIDE ICON*/
+/*BULLET LIST HIDE ICON PREVIEW*/
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg 
 {
     display: none;
@@ -391,7 +415,7 @@ a,
     width: 7px;
 }
 
-/*BULLET LIST ARROW TURN*/
+/*BULLET LIST ARROW TURN PREVIEW*/
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon 
 {
     transform: translateX(-3px) translateY(-2px) rotate(-90deg);
@@ -429,7 +453,7 @@ div.CodeMirror-foldgutter-open::after
   font-family: 'Inter';
   margin-left: -4px;
   top: -1px;
-  color: var(--text-accent);
+  color: var(--Blue);
   transition: transform 10ms linear 0s;
 }
 /*HEADER FOLDED ARROW EDIT*/
@@ -448,7 +472,7 @@ div.CodeMirror-foldgutter-folded::after
   font-family: 'Inter';
   margin-left: 1px;
   top: -1px;
-  color: var(--text-accent);
+  color: var(--Blue);
   opacity: 0.5;
   transition: transform 10ms linear 0s;
 }
@@ -490,7 +514,7 @@ div.CodeMirror-activeline > .HyperMD-quote
 }
 
 /*PAGE TOGGLE LINE (GOES DOWN BY THE BULLETS)*/
-.CodeMirror-gutter.CodeMirror-foldgutter /*??*/
+.CodeMirror-gutter.CodeMirror-foldgutter
 {
     background-color: transparent;
 }
@@ -792,7 +816,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 /*GRAPH VIEW NODE FILL*/
 .graph-view.color-fill
 {
-    color: var(--Blue)
+    color: rgb(187, 85, 187)
 }
 /*GRAPH VIEW INTERACTION*/
 .graph-view.color-circle,
