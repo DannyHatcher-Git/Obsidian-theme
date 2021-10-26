@@ -1,2 +1,3 @@
-# Obsidian-theme
-My first CSS theme that actually works!
+# Obsidian Orange
+
+This is an Obsidian CSS theme for light mode.
